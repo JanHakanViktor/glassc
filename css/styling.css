@@ -1,46 +1,27 @@
-.bakbild{
-    width: 100%;
-    padding: 0%;
-    position: relative;
-    
-}
 
-body {
+
+/* body {
     font-family: Arial, sans-serif;
     color: #fff;
     background-image: url(/assets/glasscafe.jpg) ;
     background-size: 100%;
     background-position: center;
     background-attachment: fixed; /* Keeps the background image fixed during scroll */
-}
+} */
 
-<<<<<<< HEAD
-.meny{
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-=======
 .header {
     position: fixed; /* Fixes the header to the top of the page */
->>>>>>> 127d7f2d31160bd2f77a8783cd16fb824805cc7a
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
     padding: 1rem;
     z-index: 1000; /* Ensures the menu bar is on top of other content */
 }
 
-<<<<<<< HEAD
-.rightmenu {
-    display: flex;
-    justify-content: space-between;
-}
-
-.logga{
-    height: 100px;
-    width: auto;
-}
-=======
 .logo{
     display: flex;
 }
->>>>>>> 127d7f2d31160bd2f77a8783cd16fb824805cc7a
+
+div img{
+    width: 100%; 
+    height: 10%;
+}
