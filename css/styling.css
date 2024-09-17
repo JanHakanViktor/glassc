@@ -5,8 +5,21 @@
     
 }
 
-body{
-    margin: 0;
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-image: url(/assets/glasscafe.jpg) ;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background image fixed during scroll */
+}
+
+.header {
+    position: fixed; /* Fixes the header to the top of the page */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 1rem;
+    z-index: 1000; /* Ensures the menu bar is on top of other content */
 }
 
 .logo{
