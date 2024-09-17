@@ -5,11 +5,23 @@
     
 }
 
-body{
-    margin: 0;
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-image: url(/assets/glasscafe.jpg) ;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background image fixed during scroll */
 }
 
-<<<<<<< HEAD
+.header {
+    position: fixed; /* Fixes the header to the top of the page */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 1rem;
+    z-index: 1000; /* Ensures the menu bar is on top of other content */
+}
+
 .meny{
     display: flex;
     justify-content: space-between;
@@ -23,8 +35,6 @@ body{
     justify-content: space-around;
 }
 
-=======
 .logo{
     display: flex;
 }
->>>>>>> 2bf09a9e6fc0bc308c958c806161606f680854ac
