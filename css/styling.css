@@ -6,8 +6,7 @@
     background-image: url(/assets/glasscafe.jpg) ;
     background-size: 100%;
     background-position: center;
-    background-attachment: fixed; /* Keeps the background image fixed during scroll */
-} */
+    background-attachment: fixed; /* Keeps the background image fixed during scroll }*/
 
 .header {
     position: fixed; /* Fixes the header to the top of the page */
