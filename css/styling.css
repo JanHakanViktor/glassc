@@ -29,7 +29,6 @@ body {
 
 .meny {
   display: flex;
-  padding: 1%;
   align-items: center;
   justify-content: space-between; /* Space out the logo and the menu */
   width: 100%;
