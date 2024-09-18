@@ -1,9 +1,3 @@
-/* .bakbild {
-  width: 100%;
-  padding: 0%;
-  position: relative;
-} */
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -27,22 +21,20 @@ body::before {
   transition: background 3s ease; 
 }
 
-
 body.loaded::before {
   background: rgba(255, 255, 255, 0); 
 }
 
-
 .header, .meny, .rightmenu {
-  position: relative; /* Ensure these are above the overlay */
-  z-index: 1; /* Keep these above the overlay */
+  position: relative; 
+  z-index: 1; 
 }
 
 .header {
-  position: fixed; /* Fixes the header to the top of the page */
+  position: fixed; 
   width: 100%;
   padding: 1rem;
-  z-index: 1000; /* Ensures the menu bar is on top of other content */
+  z-index: 1000; 
   background: linear-gradient(360deg, #ede7e73e, #525252);
 }
 
@@ -52,13 +44,12 @@ body.loaded::before {
   padding: 0.5em 0 0.5em 0;
   position: absolute;
   z-index: 1000;
-
 }
 
 .meny {
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: space-between; /* Space out logo and rightmenu */
+  align-items: center; 
+  justify-content: space-between; 
   width: 100%;
   height: 120px;
   background: linear-gradient(360deg, #ece7e73e, #525252);
@@ -69,8 +60,8 @@ body.loaded::before {
   gap: 15px;
   align-items: center; 
   text-align: center;
-  flex-grow: 1; /* Allow rightmenu to take available space */
-  justify-content: center; /* Center menu items */
+  flex-grow: 1; 
+  justify-content: center; 
 }
 
 .rightmenu a {
@@ -85,20 +76,20 @@ body.loaded::before {
   margin: 0;
   font-size: 16px;
 }
+
 .rightmenu a::after {
   content: "";
   display: block;
   width: 100%;
-  height: 2px; /* Thickness of the underline */
-  background-color: white; /* Color of the underline */
+  height: 2px; 
+  background-color: white; 
   position: absolute;
-  bottom: -5px; /* Position the underline below the text */
+  bottom: -5px; 
   left: 0;
-  transform: scaleX(0); /* Initially hide the underline */
-  transition: transform 0.3s ease; /* Transition effect */
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
 }
 
 .rightmenu a:hover::after {
-  transform: scaleX(1); /* Show the underline on hover */
-  height: 2px; /* Thickness of the underline */
+  transform: scaleX(1); 
 }
