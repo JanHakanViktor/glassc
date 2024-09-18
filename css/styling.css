@@ -7,8 +7,10 @@ body {
   background-position: center;
   background-attachment: fixed;
   position: relative; 
+  transition: background-image 1s ease-in-out; /* Lägger till en mjuk övergång på 1 sekund */
 }
 
+/* Endast vid sidladdning */
 body::before {
   content: '';
   position: fixed; 
@@ -18,7 +20,7 @@ body::before {
   bottom: 0;
   background: rgba(255, 255, 255, 1); 
   z-index: 0; 
-  transition: background 3s ease; 
+  transition: background 3s ease;
 }
 
 body.loaded::before {
@@ -35,13 +37,13 @@ body.loaded::before {
   width: 100%;
   padding: 1rem;
   z-index: 1000; 
-  background: linear-gradient(360deg, #ede7e73e, #525252);
+
 }
 
 .logo {
   max-width: 300px; 
   height: auto;
-  padding: 0.5em 0 0.5em 0;
+  padding: 0.5em 0;
   position: absolute;
   z-index: 1000;
 }
@@ -52,7 +54,8 @@ body.loaded::before {
   justify-content: space-between; 
   width: 100%;
   height: 120px;
-  background: linear-gradient(360deg, #ece7e73e, #525252);
+  background: linear-gradient(to bottom, rgba(8, 6, 6, 0.8) 0%, rgba(82, 82, 82, 0) 100%);
+
 }
 
 .rightmenu {
@@ -62,6 +65,12 @@ body.loaded::before {
   text-align: center;
   flex-grow: 1; 
   justify-content: center; 
+  list-style: none; 
+  padding: 0; 
+}
+
+.rightmenu li {
+  display: flex; 
 }
 
 .rightmenu a {

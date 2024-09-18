@@ -6,19 +6,63 @@
     <title>Åsas Glasscafé</title>
     <link rel="stylesheet" href="/css/styling.css">
 </head>
-<body>
+<body style="background-image: url('/assets/pexels-goumbik-1352296.jpg');">
     <header>
         <img class="logo" src="/assets/cafélogovit.png" alt="Café Logo">
         <nav class="meny">
-            <div class="rightmenu">
-                <a href="#start"><h3>Start</h3></a>
-                <a href="#bildgalleri"><h3>Bildgalleri</h3></a>
-                <a href="#oppettider"><h3>Öppettider</h3></a>
-            </div>
+            <ul class="rightmenu">
+                <li><a href="#start"><h3>Start</h3></a></li>
+                <li><a href="#bildgalleri"><h3>Bildgalleri</h3></a></li>
+                <li><a href="#oppettider"><h3>Öppettider</h3></a></li>
+            </ul>
         </nav>
     </header>
 
     <script>
+        // Bildlista
+        const images = [
+            '/assets/pexels-goumbik-1352296.jpg',
+            '/assets/pexels-jeshoots-3631.jpg', 
+            '/assets/pexels-mayday-1425174.jpg', 
+            '/assets/pexels-goumbik-1352296 (1).jpg', 
+            '/assets/pexels-jean-balzan-210755-675439.jpg'
+        ];
+
+        // Förladdning av bilder
+        function preloadImages(imageArray, callback) {
+            let loadedImages = 0;
+            let totalImages = imageArray.length;
+
+            // Skapa en ny Image-objekt för varje bild och ladda den
+            imageArray.forEach(function(src) {
+                const img = new Image();
+                img.src = src;
+                img.onload = function() {
+                    loadedImages++;
+                    if (loadedImages === totalImages) {
+                        callback(); // Kör callback när alla bilder är förladdade
+                    }
+                };
+                img.onerror = function() {
+                    console.error('Error loading image:', src);
+                };
+            });
+        }
+
+        let currentIndex = 0;
+
+        // Byter bakgrundsbild
+        function changeBackgroundImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+        }
+
+        // Körs när alla bilder är förladdade
+        preloadImages(images, function() {
+            // Starta bildväxlingen efter att alla bilder har laddats
+            setInterval(changeBackgroundImage, 4000); // Byt bild var 4:e sekund
+        });
+
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
         });
