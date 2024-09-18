@@ -1,17 +1,41 @@
-.bakbild {
+/* .bakbild {
   width: 100%;
   padding: 0%;
   position: relative;
-}
+} */
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff;
-  background-image: url(/assets/glasscafe.jpg);
-  background-size: 100%;
+  background-image: url(/assets/pexels-goumbik-1352296.jpg);
+  background-size: cover; 
   background-position: center;
-  background-attachment: fixed; /* Keeps the background image fixed during scroll */
+  background-attachment: fixed;
+  position: relative; 
+}
+
+body::before {
+  content: '';
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 1); 
+  z-index: 0; 
+  transition: background 3s ease; 
+}
+
+
+body.loaded::before {
+  background: rgba(255, 255, 255, 0); 
+}
+
+
+.header, .meny, .rightmenu {
+  position: relative; /* Ensure these are above the overlay */
+  z-index: 1; /* Keep these above the overlay */
 }
 
 .header {
@@ -23,27 +47,30 @@ body {
 }
 
 .logo {
-  max-width: 100%;
+  max-width: 300px; 
   height: auto;
+  padding: 0.5em 0 0.5em 0;
+  position: absolute;
+  z-index: 1000;
+
 }
 
 .meny {
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space out the logo and the menu */
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space out logo and rightmenu */
   width: 100%;
+  height: 120px;
   background: linear-gradient(360deg, #ece7e73e, #525252);
-  position: relative;
 }
 
 .rightmenu {
   display: flex;
-  color: #fff;
   gap: 15px;
-  justify-content: center; /* Center the items within rightmenu */
-  align-items: center; /* Align items vertically */
-  flex: 1; /* Allow rightmenu to take available space */
-  position: relative;
+  align-items: center; 
+  text-align: center;
+  flex-grow: 1; /* Allow rightmenu to take available space */
+  justify-content: center; /* Center menu items */
 }
 
 .rightmenu a {
