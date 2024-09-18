@@ -1,29 +1,56 @@
-.bakbild{
-    width: 100%;
-    padding: 0%;
-    position: relative;
-    
-}
+
 
 body {
     font-family: Arial, sans-serif;
-    color: #fff;
-    background-image: url(/assets/glasscafe.jpg) ;
+    color: #ffffff;
+    background-image: url(/glassc/assets/glasscafe.jpg) ;
     background-size: 100%;
     background-position: center;
     background-attachment: fixed; /* Keeps the background image fixed during scroll */
 }
 
-.header {
-    position: fixed; /* Fixes the header to the top of the page */
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
-    padding: 1rem;
-    z-index: 1000; /* Ensures the menu bar is on top of other content */
+#logo{
+    display: flex;
+    justify-content: center;
 }
 
-.logo{
+#content-container{
     display: flex;
+    padding: 100px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#welcome-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.right-container{
+    display: flex;
+    justify-content: center;
+    max-width: 400px;   
+}
+
+#main-container{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.QA-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
 }
 
 .footer-menu{
@@ -34,18 +61,17 @@ body {
     margin-right: 30%;
 }
 
-#left-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+@media (min-width: 576px) {
+
+
 }
 
+@media (min-width: 0px) and (max-width: 576px) {
 
-aside{
-    display: flex;
-}
+    #flex-container{
+        font-size: 10px;
+        justify-content: center;
+    }
 
-.QA-container{
-    display: block;
+
 }
