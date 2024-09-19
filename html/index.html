@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/styling.css">
 </head>
 <body style="background-image: url('/assets/pexels-goumbik-1352296.jpg');">
-    <header>
+    <header class="header">
         <img class="logo" src="/assets/logotypvit.png" alt="Café Logo">
         <nav class="meny">
             <ul class="rightmenu">
@@ -125,6 +125,20 @@
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
         });
+
+
+        window.addEventListener('scroll', function() {
+    var header = document.querySelector('.header');
+    
+    // Om sidan har skrollats mer än 50px, lägg till klassen "scrolled"
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  
+  
     </script>
 </body>
 </html>
