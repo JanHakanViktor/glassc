@@ -180,20 +180,25 @@ body.loaded::before {
 footer{
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 #menu-container{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
-  background-color: rgb(237, 183, 183);
-  color: black;
+  align-items: center;
+  background-color: rgba(206, 206, 206, 0.413);
   height: 20px;
   width: 400px;
+  gap: 20px;
+  border-style: solid;
+  border-radius: 15px;
 }
 
-.footer-item{
-  border: 10px solid white;
+a{
+  text-decoration: none;
+  color: white;
 }
 
 @media (min-width: 576px) {
