@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Åsas Glasscafé</title>
+    <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/styling.css">
 </head>
 <body style="background-image: url('/assets/pexels-goumbik-1352296.jpg');">
@@ -22,40 +23,92 @@
         <h1>Välkommen till Åsa Glasscafé</h1>
         <h2>Ett paradis för glassälskare</h2>
         </div>
+        <div id="content-container">
+                <div id="main-container">
 
+                    <section id="left-container">
+                        <div>
+                            <h3>Så roligt att just du har hittat hit!</h3>
+                            <p>Vi ser fram emot att få hälsa just Dig välkommen till vårt glassparadis.</p>
+                        </div>
+                        <div>
+                            <h3>Följ oss gärna på Instagram och Facebook</h3>
+                        </div>
+                        <div>
+                            <h3>Så roligt att just du har hittat hit!</h3>
+                            <p>Vi ser fram emot att få hälsa just Dig välkommen till vårt glassparadis.</p>
+                        </div>
+                    </section>
+
+                    <section class="right-container">
+                            <h3> Vi erbjuder kulglass i 36 olika smaker, mjukglass, milkshake, läckra uppläggningar och såklart massor av goa tillbehör! All vår glass tillverkas av Sia Glass i Halländska Slöinge. Är du allergisk är det bara att säga till, så hjälper vi dig så gott vi kan. Vi tar tacksamt emot tips om det är något du saknar. Vårt mål är att alla ska kunna fika här!</h3>
+                    </section>
+                </div>
     </main>
-    <script>
-        // Bildlista
-        const images = [
-            '/assets/pexels-goumbik-1352296.jpg',
-            '/assets/pexels-jeshoots-3631.jpg', 
-            '/assets/pexels-mayday-1425174.jpg', 
-            '/assets/pexels-goumbik-1352296 (1).jpg', 
-            '/assets/pexels-jean-balzan-210755-675439.jpg'
-        ];
+        <aside>
+            <section class="QA-container">
+                <h3>Vanliga frågor:</h3>
+                <div class="pay">
+                    <h4>Kan man betala med kort hos er ?</h4>
+                    <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+                </div>
+                <div class="lactose">
+                    <h4>Har ni laktosfria alternativ?</h4>
+                    <p>- Ja. Vi har flera laktosfria gräddglassar och helt mjölkfria sorbeter. Vår mjukglass är också helt laktosfri.</p>
+                </div>
+                <div class="milk-free">
+                    <h4>Har ni mjölkfria alternativ?</h4>
+                    <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+                </div>
+                <div class="vegan">
+                    <h4>Har ni veganglass?</h4>
+                    <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+                </div>
+                <div class="dog">
+                    <h4>Får man ta med sig hunden?</h4>
+                    <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+                </div>
+                <div class="open">
+                    <h4>Hur vet man om ni fortfarande har öppet på kvällen?</h4>
+                    <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+                </div>
+                
+            </section>
+        </aside>
+        </div>
 
-        // Förladdning av bilder
-        function preloadImages(imageArray, callback) {
-            let loadedImages = 0;
-            let totalImages = imageArray.length;
-
-            // Skapa en ny Image-objekt för varje bild och ladda den
-            imageArray.forEach(function(src) {
-                const img = new Image();
-                img.src = src;
-                img.onload = function() {
-                    loadedImages++;
-                    if (loadedImages === totalImages) {
-                        callback(); // Kör callback när alla bilder är förladdade
-                    }
-                };
-                img.onerror = function() {
-                    console.error('Error loading image:', src);
-                };
-            });
-        }
-
-        let currentIndex = 0;
+        <script>
+            // Bildlista
+            const images = [
+                '/assets/pexels-goumbik-1352296.jpg',
+                '/assets/pexels-jeshoots-3631.jpg', 
+                '/assets/pexels-mayday-1425174.jpg', 
+                '/assets/pexels-goumbik-1352296 (1).jpg', 
+                '/assets/pexels-jean-balzan-210755-675439.jpg'
+            ];
+    
+            // Förladdning av bilder
+            function preloadImages(imageArray, callback) {
+                let loadedImages = 0;
+                let totalImages = imageArray.length;
+    
+                // Skapa en ny Image-objekt för varje bild och ladda den
+                imageArray.forEach(function(src) {
+                    const img = new Image();
+                    img.src = src;
+                    img.onload = function() {
+                        loadedImages++;
+                        if (loadedImages === totalImages) {
+                            callback(); // Kör callback när alla bilder är förladdade
+                        }
+                    };
+                    img.onerror = function() {
+                        console.error('Error loading image:', src);
+                    };
+                });
+            }
+    
+            let currentIndex = 0;
 
         // Byter bakgrundsbild
         function changeBackgroundImage() {

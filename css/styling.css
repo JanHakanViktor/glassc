@@ -1,15 +1,146 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('assets/OpenSansCondensed-Bold.ttf') format('truetype'),
+       url('assets/OpenSansCondensed-Light.ttf') format('truetype'),
+       url('assets/OpenSansCondensed-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'MyCustomFont', sans-serif; 
+  color: #fff;
+  background-image: url(/assets/pexels-mayday-1425174.jpg);
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+  position: relative; 
+  transition: background-image 1s ease-in-out; /* Lägger till en mjuk övergång på 1 sekund */
+}
+
+/* Endast vid sidladdning */
+body::before {
+  content: '';
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 1); 
+  z-index: 0; 
+  transition: background 3s ease;
+}
+
+body.loaded::before {
+  background: rgba(255, 255, 255, 0); 
+}
+
+.header, .meny, .rightmenu {
+  position: relative; 
+  z-index: 1; 
+}
+
+.header {
+  position: fixed; 
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000; 
+
+}
+
+.logo {
+  max-width: 300px; 
+  height: auto;
+  padding: 0.5em 0 0 0.5em;
+  position: absolute;
+  z-index: 1000;
+}
+
+.meny {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(8, 6, 6, 0.8) 0%, rgba(82, 82, 82, 0) 100%);
+
+}
+
+.rightmenu {
+  display: flex;
+  gap: 15px;
+  align-items: center; 
+  text-align: center;
+  flex-grow: 1; 
+  justify-content: center; 
+  list-style: none; 
+  padding: 0; 
+}
+
+.rightmenu li {
+  display: flex; 
+}
+
+.rightmenu a {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  padding: 10px 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.rightmenu h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.rightmenu a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; 
+  background-color: white; 
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
+}
+
+.rightmenu a:hover::after {
+  transform: scaleX(1); 
+}
+
+@keyframes fadeInAndGrow {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); /* Startar med halv storlek */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Slutar med full storlek */
+  }
+}
+.welcome {
+  display: block;
+  font-size: 200%;
+  text-align: center;
+  padding: 0; 
+  margin-top: 10em;
+  opacity: 0.5;
+  /* background-color: rgba(0, 0, 0, 0.5); Svart, 50% genomskinlig bakgrund */
+  /* border-radius: 10px; / */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  animation: fadeInAndGrow 1s ease forwards; 
+}
 
 #content-container{
     display: flex;
     padding: 100px;
     margin: 0 auto;
     max-width: 1000px;
-}
-
-#welcome-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #left-container{
@@ -56,7 +187,6 @@
 
 @media (min-width: 576px) {
 
-
 }
 
 @media (min-width: 0px) and (max-width: 576px) {
@@ -65,6 +195,5 @@
         font-size: 10px;
         justify-content: center;
     }
-
 
 }
