@@ -1,124 +1,137 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('assets/OpenSansCondensed-Bold.ttf') format('truetype'),
+       url('assets/OpenSansCondensed-Light.ttf') format('truetype'),
+       url('assets/OpenSansCondensed-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'MyCustomFont', sans-serif; 
+  color: #fff;
+  background-image: url(/assets/pexels-goumbik-1352296.jpg);
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+  position: relative; 
+  transition: background-image 1s ease-in-out; /* Lägger till en mjuk övergång på 1 sekund */
+}
+
+/* Endast vid sidladdning */
+body::before {
+  content: '';
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 1); 
+  z-index: 0; 
+  transition: background 3s ease;
+}
+
+body.loaded::before {
+  background: rgba(255, 255, 255, 0); 
+}
+
+.header, .meny, .rightmenu {
+  position: relative; 
+  z-index: 1; 
+}
 
 .header {
-    position: fixed; /* Fixes the header to the top of the page */
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
-    padding: 1rem;
-    z-index: 1000; /* Ensures the menu bar is on top of other content */
+  position: fixed; 
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000; 
 
 }
 
-div img{
-   width: 100%;
-   max-height: max-content;
-   
+.logo {
+  max-width: 300px; 
+  height: auto;
+  padding: 0.5em 0 0 0.5em;
+  position: absolute;
+  z-index: 1000;
 }
 
 .meny {
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Lite genomskinlig bakgrund */
-    z-index: 1000; /* Ser till att menyn är överst */
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(8, 6, 6, 0.8) 0%, rgba(82, 82, 82, 0) 100%);
+
 }
 
-/* Styla logotypen */
-.logo {
-    display: flex;
-    height: 100px;
-    width: auto;
-    padding: 0;
-    position: absolute;
-    z-index: 1000;
-}
-
-/* Placera den högra menyn */
 .rightmenu {
-    display: flex;
-    gap: 20px;
-    color: white;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1;
-    justify-content: center;
-    padding: 0%;
+  display: flex;
+  gap: 15px;
+  align-items: center; 
+  text-align: center;
+  flex-grow: 1; 
+  justify-content: center; 
+  list-style: none; 
+  padding: 0; 
 }
 
-.carousel{
-    position: relative;
+.rightmenu li {
+  display: flex; 
 }
 
-/* Anpassa texten i höger menyn */
+.rightmenu a {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  padding: 10px 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
 .rightmenu h3 {
-    margin: 0;
-    cursor: pointer;
-    padding: 20px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-    
+  margin: 0;
+  font-size: 16px;
 }
 
-.rightmenu h3:hover{
-    background-color: #E70D0D;
-    color: white;
-    transform: scale(1.2);
-    transition: 0.5s;
-    
+.rightmenu a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; 
+  background-color: white; 
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
 }
 
-.carousel .meny {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: transparent;
-    z-index: 10; /* För att menyn ska synas över bilderna */
+.rightmenu a:hover::after {
+  transform: scaleX(1); 
 }
 
-.Rubrik {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white; /* Färgen på texten, ändra vid behov */
-    z-index: 10; /* Se till att rubriken visas ovanpå bilden */
-    
+@keyframes fadeInAndGrow {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); /* Startar med halv storlek */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Slutar med full storlek */
+  }
 }
-
-.carousel-item {
-    height: 1000px; /* Bestäm den höjd du vill ha för bilderna */
+.welcome {
+  display: block;
+  font-size: 200%;
+  text-align: center;
+  padding: 0; 
+  margin-top: 10em;
+  opacity: 0.5;
+  /* background-color: rgba(0, 0, 0, 0.5); Svart, 50% genomskinlig bakgrund */
+  /* border-radius: 10px; / */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  animation: fadeInAndGrow 1s ease forwards; 
 }
-
-.bildspel {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Behåller bildens proportioner och fyller hela området */
-}
-
-div h1{
-    font-weight: 800;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-   
-}
-
-div h2{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-}
-
-
-
-
-
-
-
-
-
