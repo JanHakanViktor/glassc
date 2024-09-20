@@ -216,6 +216,8 @@ border-radius: 10%;
 
 html{
   scroll-behavior: smooth;
+}
+
 .colleague {
   width: 100%;
   border-radius: 50px;
