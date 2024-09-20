@@ -1,27 +1,230 @@
-.bakbild{
-    width: 100%;
-    padding: 0%;
-    position: relative;
-    
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("assets/OpenSansCondensed-Bold.ttf") format("truetype"),
+       url("assets/OpenSansCondensed-Light.ttf") format("truetype"),
+       url("assets/OpenSansCondensed-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-image: url(/assets/glasscafe.jpg) ;
-    background-size: 100%;
-    background-position: center;
-    background-attachment: fixed; /* Keeps the background image fixed during scroll */
+  margin: 0;
+  font-family: "MyCustomFont", sans-serif;
+  color: #fff;
+  background-attachment: fixed;
+  overflow-x: hidden; /* Förhindrar sidrullning åt höger om sidan expanderas */
+}
+
+.background-section {
+  background-image: url('/assets/pexels-mayday-1425174.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  position: relative;
+  background-repeat: no-repeat;
+  opacity: 0; /* Startar osynlig */
+  transition: opacity 2s ease, background-image 1s ease-in-out; /* Fadar in över 2 sekunder */
+}
+
+.background-section.fade-in {
+  opacity: 1; /* Gör sektionen synlig när sidan är laddad */
+}
+
+.header,
+.meny,
+.rightmenu {
+  position: relative;
+  z-index: 1;
 }
 
 .header {
-    position: fixed; /* Fixes the header to the top of the page */
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
-    padding: 1rem;
-    z-index: 1000; /* Ensures the menu bar is on top of other content */
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
 }
 
-.logo{
-    display: flex;
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, rgba(35, 34, 34, 0.273) 100%, rgba(82, 82, 82, 0) 100%);
+}
+
+.logo {
+  max-width: 8em;
+  height: auto;
+  padding: 0.5em 0 0 0.5em;
+  position: absolute;
+  z-index: 1000;
+}
+
+.meny {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(8, 6, 6, 0.8) 0%, rgba(82, 82, 82, 0) 100%);
+}
+
+.rightmenu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.rightmenu li {
+  display: flex;
+}
+
+.rightmenu a {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  padding: 10px 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rightmenu h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.rightmenu a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.rightmenu a:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes fadeInAndGrow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8); /* Startar med halv storlek */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Slutar med full storlek */
+  }
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 200%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 100%; /* Se till att sektionen täcker hela höjden */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  animation: fadeInAndGrow 1s ease forwards;
+}
+
+#master-container {
+  background-color: #fff;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative; /* Se till att den inte överlappar med andra element */
+  z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
+}
+
+#content-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 30px;
+  border-style: solid;
+  background-color: #4b4b4b5a;
+  margin-right: 50px;
+  border-radius: 50px;
+}
+
+.item {
+  max-width: 400px;
+  text-align: center;
+  margin: 15px;
+}
+
+.colleague {
+  width: 100%;
+  border-radius: 50px;
+}
+
+#sticky-scroll{
+    position: sticky;
+    padding: 20px;
+}
+
+.QA-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  border-style: solid;
+  border-radius: 50px;
+  background-color: #4b4b4b5a;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#menu-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(206, 206, 206, 0.413);
+  height: 20px;
+  width: 400px;
+  gap: 20px;
+  border-style: solid;
+  border-radius: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+}
+
+@media (min-width: 1025px) {
+
+    aside{
+        
+    }
+
 }
