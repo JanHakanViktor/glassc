@@ -123,6 +123,7 @@ body {
     transform: scale(1); /* Slutar med full storlek */
   }
 }
+
 .welcome {
   display: flex;
   flex-direction: column;
@@ -138,16 +139,20 @@ body {
 }
 
 #master-container {
+  display: flex;
+  justify-content: space-evenly;
   background-color: #fff;
   padding: 100px;
   display: flex;
   justify-content: center;
   position: relative; /* Se till att den inte överlappar med andra element */
   z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
+  max-width: auto;
 }
 
 #content-container {
   display: flex;
+  flex: 1;
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1000px;
@@ -165,7 +170,6 @@ body {
     grid-column-gap: 2px;
     grid-row-gap: 2px;
     }
-    
     .img-fluid { grid-area: 1 / 2 / 2 / 3; }
     .img-fluid2 { grid-area: 1 / 3 / 2 / 4; }
     .img-fluid3 { grid-area: 1 / 4 / 2 / 5; }
@@ -193,7 +197,6 @@ border-radius: 10%;
 }
 
 
-
 #gallerysection{
     /* height: 100vh; */
     width: auto;
@@ -216,15 +219,20 @@ border-radius: 10%;
 
 html{
   scroll-behavior: smooth;
+}
+
 .colleague {
   width: 100%;
   border-radius: 50px;
 }
 
-#sticky-scroll{
-    position: fixed;
-    top: 50px;
-    padding: 20px;
+aside{
+    height: 25vh;
+    min-height: 200px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15%;
+    min-width: 300px;
 }
 
 .QA-container{
@@ -282,7 +290,40 @@ footer{
     align-items: center;
     justify-content: center;
   }
+    #side-nav{
+        height: 100%; /* Full-height */
+          width: 50px; /* Initially hidden */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          top: 0;
+          left: 0;
+          background-color: #111; /* Black background color */
+          overflow-x: hidden; /* Disable horizontal scrolling */
+          transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+          padding-top: 60px; /* Place content 60px from the top */
 
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+          }
+
+          .sidenav a:hover {
+            color: #f1f1f1;
+          }
+
+          .sidenav.open {
+            width: 250px; /* Define the width when open */
+          }
+
+          .master-container{
+            transition: margin-left 0.5s;
+          }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
