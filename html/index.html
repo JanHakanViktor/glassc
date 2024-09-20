@@ -11,10 +11,13 @@
     <div class="background-section">
       <header class="header">
         <img class="logo" src="/assets/logotyp.png" alt="Café Logo" />
-        <nav class="meny">
+        <nav id="side-nav" class="meny">
           <ul class="rightmenu">
             <li>
-              <a href="#start"><h3>START</h3></a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </li>
+            <li>
+                <a href="#start"><h3>START</h3></a>
             </li>
             <li>
               <a href="#bildgalleri"><h3>BILDGALLERI</h3></a>
@@ -24,6 +27,7 @@
             </li>
           </ul>
         </nav>
+
       </header>
       <div class="welcome">
         <h1>Välkommen till Åsa Glasscafé</h1>
