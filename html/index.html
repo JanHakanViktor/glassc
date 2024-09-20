@@ -169,6 +169,17 @@
       window.addEventListener("load", function () {
         document.querySelector(".background-section").classList.add("fade-in");
       });
+
+
+      window.addEventListener("scroll", function () {
+  var header = document.querySelector(".header");
+
+  if (window.scrollY > 20) { // Skrollar mer innan mörkare bakgrund läggs till
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
     </script>
   </body>
 </html>
