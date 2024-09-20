@@ -146,7 +146,6 @@ body {
   justify-content: center;
   position: relative; /* Se till att den inte överlappar med andra element */
   z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
-  max-width: auto;
   background-color: wheat;
   padding-top: 50px;
 }
@@ -160,7 +159,6 @@ main{
 
 #content-container {
   display: flex;
-  flex: 1;
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1000px;
