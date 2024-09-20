@@ -139,6 +139,7 @@
 
    
         
+    <button id="scrollToTop" style="display: none;">Till toppen</button>
 
 
 
@@ -220,6 +221,26 @@
     header.classList.remove("scrolled");
   }
 });
+
+// Visa knappen när användaren har scrollat ner en viss sträcka
+window.onscroll = function() {
+  const button = document.getElementById("scrollToTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    button.style.display = "block"; // Visa knappen
+  } else {
+    button.style.display = "none"; // Dölja knappen
+  }
+};
+
+// Scrolla till toppen när knappen klickas
+document.getElementById("scrollToTop").onclick = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Gör scrollningen mjuk
+  });
+};
+
+
     </script>
     
 </body>

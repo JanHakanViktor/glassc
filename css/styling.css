@@ -141,12 +141,21 @@ body {
 #master-container {
   display: flex;
   justify-content: space-evenly;
-  background-color: wheat;
-  padding-top: 50px;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   position: relative; /* Se till att den inte överlappar med andra element */
   z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
+  max-width: auto;
+  background-color: wheat;
+  padding-top: 50px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
 }
 
 #content-container {
@@ -160,6 +169,10 @@ body {
   background-color: #4b4b4b5a;
   margin-right: 50px;
   border-radius: 50px;
+}
+
+#gallery-container{
+    max-width: 1000px;
 }
 
 #main-container{
@@ -188,15 +201,12 @@ body {
 
     
 
-    
-
 #main-container img{
 width: 300px;
 height: auto;
 padding: 10px;
-border-radius: 10%;
+border-radius: 50px;
 }
-
 
 
 #gallerysection{
@@ -237,8 +247,8 @@ aside{
     position: sticky;
     top: 15%;
     min-width: 400px;
-    
-
+    margin-right: 100px;
+    padding-top: 50px;
 }
 
 .QA-container{
@@ -251,9 +261,8 @@ aside{
   border-radius: 50px;
   background-color: #4b4b4b5a;
   position: absolute;
-  height: auto;
-  
-  
+  padding: 30px;
+  min-width: 400px;
 }
 
 
@@ -286,6 +295,21 @@ a{
   color: white;
 }
 
+#scrollToTop {
+  position: fixed;
+  bottom: 1.4em;
+  display: none; /* Döljer knappen initialt */
+  background-color: #000000;
+  opacity: 0.5;
+  transform: translateX(-80%); /* För att justera positioneringen och få den exakt centrerad */
+  left: 20%;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 footer{
   display: flex;
@@ -311,7 +335,7 @@ footer{
           overflow-x: hidden; /* Disable horizontal scrolling */
           transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
           padding-top: 60px; /* Place content 60px from the top */
-          
+
         }
 
         .sidenav a {
