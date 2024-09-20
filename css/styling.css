@@ -168,8 +168,8 @@ body.loaded::before {
 
 #sticky-scroll{
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 50px;
+    padding: 20px;
 }
 
 .QA-container{
@@ -221,5 +221,8 @@ a{
 
 @media (min-width: 1025px) {
 
+    aside{
+        
+    }
 
 }
