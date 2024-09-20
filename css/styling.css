@@ -142,12 +142,20 @@ body {
   display: flex;
   justify-content: space-evenly;
   background-color: #fff;
-  padding: 100px;
   display: flex;
   justify-content: center;
   position: relative; /* Se till att den inte överlappar med andra element */
   z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
   max-width: auto;
+  background-color: wheat;
+  padding-top: 50px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
 }
 
 #content-container {
@@ -161,6 +169,10 @@ body {
   background-color: #4b4b4b5a;
   margin-right: 50px;
   border-radius: 50px;
+}
+
+#gallery-container{
+    max-width: 1000px;
 }
 
 #main-container{
@@ -187,13 +199,11 @@ body {
     .img-fluid15 { grid-area: 5 / 4 / 6 / 5;}  
 
 
-    
-
 #main-container img{
 width: 300px;
 height: auto;
 padding: 10px;
-border-radius: 10%;
+border-radius: 50px;
 }
 
 
@@ -232,7 +242,9 @@ aside{
     position: -webkit-sticky;
     position: sticky;
     top: 15%;
-    min-width: 300px;
+    min-width: 400px;
+    margin-right: 100px;
+    padding-top: 50px;
 }
 
 .QA-container{
@@ -245,6 +257,8 @@ aside{
   border-radius: 50px;
   background-color: #4b4b4b5a;
   position: absolute;
+  padding: 30px;
+  min-width: 400px;
 }
 
 .item{
