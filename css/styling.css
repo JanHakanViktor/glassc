@@ -145,22 +145,20 @@ body {
   display: flex;
   justify-content: center;
   position: relative; /* Se till att den inte överlappar med andra element */
-  z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
-  max-width: auto;
+  z-index: 0; /* Lägger den ovanför bakgrunden om det behövs */
   background-color: wheat;
-  padding-top: 50px;
+  padding: 100px
 }
 
 main{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 50px;
+    padding: 100px;
 }
 
 #content-container {
   display: flex;
-  flex: 1;
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1000px;
@@ -173,6 +171,7 @@ main{
 
 #gallery-container{
     max-width: 1000px;
+    
 }
 
 #main-container{
@@ -241,7 +240,7 @@ html{
 }
 
 aside{
-    height: 0vh;
+    height: 400px;
     min-height: 200px;
     position: -webkit-sticky;
     position: sticky;
@@ -256,7 +255,7 @@ aside{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 400px;
+  max-width: 300px;
   border-style: solid;
   border-radius: 50px;
   background-color: #4b4b4b5a;
