@@ -271,6 +271,36 @@ aside{
   border-radius: 15px;
 }
 
+#oppetider-container {
+  display: flex;
+  margin-top: 2em;
+  gap: 1.2em;
+  width: 1000px;
+  border: solid black 1px;
+
+}
+  .kontakt {
+  display: block;
+  justify-content: center;
+  max-width: 1000px;
+  gap: 30px;
+  border-style: solid;
+  padding: 1em;
+  margin: 0;
+  background-color: #c702025a;
+  border-radius: 50px;
+}
+.karta {
+  display: block;
+  justify-content: center;
+  max-width: 1000px;
+  gap: 30px;
+  border-style: solid;
+  padding: 1em;
+  background-color: #c702025a;
+  border-radius: 50px;
+}
+
 a{
   text-decoration: none;
   color: white;
