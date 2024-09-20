@@ -1,11 +1,11 @@
-@font-face {
+/* @font-face {
   font-family: "MyCustomFont";
   src: url("assets/OpenSansCondensed-Bold.ttf") format("truetype"),
        url("assets/OpenSansCondensed-Light.ttf") format("truetype"),
        url("assets/OpenSansCondensed-LightItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 body {
   margin: 0;
@@ -232,7 +232,10 @@ aside{
     position: -webkit-sticky;
     position: sticky;
     top: 15%;
+<<<<<<< HEAD
     min-width: 300px;
+=======
+>>>>>>> 992e411ab284ad35ee598b0ecc8ea8e0842632ca
 }
 
 .QA-container{
@@ -277,6 +280,7 @@ a{
 }
 
 
+<<<<<<< HEAD
 footer{
   display: flex;
   justify-content: center;
@@ -304,6 +308,22 @@ footer{
 
         }
 
+=======
+    #side-nav{
+        height: 100%; /* Full-height */
+          width: 50px; /* Initially hidden */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          top: 0;
+          left: 0;
+          background-color: #111; /* Black background color */
+          overflow-x: hidden; /* Disable horizontal scrolling */
+          transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+          padding-top: 60px; /* Place content 60px from the top */
+          
+        }
+
+>>>>>>> 992e411ab284ad35ee598b0ecc8ea8e0842632ca
         .sidenav a {
             padding: 8px 8px 8px 32px;
             text-decoration: none;

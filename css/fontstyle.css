@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("assets/OpenSansCondensed-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("assets/OpenSansCondensed-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  font-family: "MyCustomFont", sans-serif;
+  color: #fff;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}/*# sourceMappingURL=fontstyle.css.map */
