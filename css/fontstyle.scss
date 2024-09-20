@@ -1,0 +1,23 @@
+$font-path: 'assets/'; 
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('#{$font-path}OpenSansCondensed-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('#{$font-path}OpenSansCondensed-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'MyCustomFont', sans-serif;
+  color: #fff;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
