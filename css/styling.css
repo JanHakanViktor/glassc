@@ -145,7 +145,7 @@ body {
   display: flex;
   justify-content: center;
   position: relative; /* Se till att den inte överlappar med andra element */
-  z-index: 0; /* Lägger den ovanför bakgrunden om det behövs */
+  z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
   background-color: wheat;
   padding: 100px
 }
