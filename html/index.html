@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Åsas Glasscafé</title>
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/css/styling.css">
-</head>
-<body style="background-image: url('/assets/pexels-goumbik-1352296.jpg');">
-    <header>
-        <img class="logo" src="/assets/logotyp.png" alt="Café Logo">
+    <link rel="stylesheet" href="/css/font.css" />
+    <link rel="stylesheet" href="/css/styling.css" />
+  </head>
+  <body>
+    <div class="background-section">
+      <header class="header">
+        <img class="logo" src="/assets/logotyp.png" alt="Café Logo" />
         <nav class="meny">
-            <ul class="rightmenu">
-                <li><a href="#start"><h3>START</h3></a></li>
-                <li><a href="#bildgalleri"><h3>BILDGALLERI</h3></a></li>
-                <li><a href="#oppettider"><h3>ÖPPETTIDER</h3></a></li>
-            </ul>
+          <ul class="rightmenu">
+            <li>
+              <a href="#start"><h3>START</h3></a>
+            </li>
+            <li>
+              <a href="#bildgalleri"><h3>BILDGALLERI</h3></a>
+            </li>
+            <li>
+              <a href="#oppettider"><h3>ÖPPETTIDER</h3></a>
+            </li>
+          </ul>
         </nav>
-    </header>
-
-    <div class="welcome">
+      </header>
+      <div class="welcome">
         <h1>Välkommen till Åsa Glasscafé</h1>
         <h2>Ett paradis för glassälskare</h2>
+      </div>
     </div>
-
     <div id="master-container">
-        <main>
-            <div id="content-container">
-                <section class="item">
-                    <h3>Så roligt att just du har hittat hit!</h3>
-                    <p>Vi ser fram emot att få hälsa just Dig välkommen till vårt glassparadis.</p>
-                </section>
-                <section class="item">
-                    <h3>Följ oss gärna på Instagram och Facebook</h3>
-
-                    <a href="https://www.facebook.com/asa.glasscafe/?locale=sv_SE">
-                        <img class="social-media" src="/assets/fb.png" alt="Facebook">
-                    </a>
-
-                    <a href="https://www.instagram.com/glasscafe/">
-                        <img class="social-media" src="/assets/ig.png" alt="Facebook">
-                    </a>
-                    
-                </section>
-                <section class="item">
-                    <h3> Vi erbjuder kulglass i 36 olika smaker, mjukglass, milkshake, läckra uppläggningar och såklart massor av goa tillbehör! All vår glass tillverkas av Sia Glass i Halländska Slöinge. Är du allergisk är det bara att säga till, så hjälper vi dig så gott vi kan. Vi tar tacksamt emot tips om det är något du saknar. Vårt mål är att alla ska kunna fika här!</h3>
-                </section>
-                <div class="item">
-                    <img class="colleague" src="/assets/bildgalleri.jpg" alt="Bild på kollegor">
-                </div>
+      <main>
+          <div id="content-container">
+            <section class="item">
+              <h3>Så roligt att just du har hittat hit!</h3>
+              <p>
+                Vi ser fram emot att få hälsa just Dig välkommen till vårt
+                glassparadis.
+              </p>
+            </section>
+            <section class="item">
+              <h3>Följ oss gärna på Instagram och Facebook</h3>
+  
+              <a href="https://www.facebook.com/asa.glasscafe/?locale=sv_SE">
+                <img class="social-media" src="/assets/fb.png" alt="Facebook" />
+              </a>
+  
+              <a href="https://www.instagram.com/glasscafe/">
+                <img class="social-media" src="/assets/ig.png" alt="Facebook" />
+              </a>
+            </section>
+            <section class="item">
+              <h3>
+                Vi erbjuder kulglass i 36 olika smaker, mjukglass, milkshake,
+                läckra uppläggningar och såklart massor av goa tillbehör! All vår
+                glass tillverkas av Sia Glass i Halländska Slöinge. Är du
+                allergisk är det bara att säga till, så hjälper vi dig så gott vi
+                kan. Vi tar tacksamt emot tips om det är något du saknar. Vårt mål
+                är att alla ska kunna fika här!
+              </h3>
+            </section>
+            <div class="item">
+              <img
+                class="colleague"
+                src="/assets/bildgalleri.jpg"
+                alt="Bild på kollegor"
+              />
             </div>
-
+          </div>
         </main>
             <aside>
                 <div id="sticky-scroll">
@@ -91,74 +109,80 @@
 
     <div id="menu-container">
         <a href="#meny" class="footer-item">START</a>
-        
         <a href="#Start" class="footer-item">BILDGALLERI</a>
-       
         <a href="#Start" class="footer-item">KONTAKT</a>
-    </div>
-</footer>
+      </div>
+    </footer>
+    <script>
+      // Bildlista
+      const images = [
+        "/assets/pexels-goumbik-1352296.jpg",
+        "/assets/pexels-jeshoots-3631.jpg",
+        "/assets/pexels-mayday-1425174.jpg",
+        "/assets/pexels-roman-odintsov-5061036.jpg",
+        "/assets/pexels-jean-balzan-210755-675439.jpg"
+      ];
 
+      // Förladdning av bilder
+      function preloadImages(imageArray, callback) {
+        let loadedImages = 0;
+        let totalImages = imageArray.length;
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <script>
-            // Bildlista
-            const images = [
-                '/assets/pexels-goumbik-1352296.jpg',
-                '/assets/pexels-jeshoots-3631.jpg', 
-                '/assets/pexels-mayday-1425174.jpg', 
-                '/assets/pexels-goumbik-1352296 (1).jpg', 
-                '/assets/pexels-jean-balzan-210755-675439.jpg'
-            ];
-    
-            // Förladdning av bilder
-            function preloadImages(imageArray, callback) {
-                let loadedImages = 0;
-                let totalImages = imageArray.length;
-    
-                // Skapa en ny Image-objekt för varje bild och ladda den
-                imageArray.forEach(function(src) {
-                    const img = new Image();
-                    img.src = src;
-                    img.onload = function() {
-                        loadedImages++;
-                        if (loadedImages === totalImages) {
-                            callback(); // Kör callback när alla bilder är förladdade
-                        }
-                    };
-                    img.onerror = function() {
-                        console.error('Error loading image:', src);
-                    };
-                });
+        imageArray.forEach(function (src) {
+          const img = new Image();
+          img.src = src;
+          img.onload = function () {
+            loadedImages++;
+            if (loadedImages === totalImages) {
+              callback(); // Kör callback när alla bilder är förladdade
             }
-    
-            let currentIndex = 0;
-
-        // Byter bakgrundsbild
-        function changeBackgroundImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            document.body.style.backgroundImage = `url(${images[currentIndex]})`;
-        }
-
-        // Körs när alla bilder är förladdade
-        preloadImages(images, function() {
-            // Starta bildväxlingen efter att alla bilder har laddats
-            setInterval(changeBackgroundImage, 4000); // Byt bild var 4:e sekund
+          };
+          img.onerror = function () {
+            console.error("Error loading image:", src);
+          };
         });
+      }
 
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
-        });
+      let currentIndex = 0;
+
+      // Byter bakgrundsbild
+      function changeBackgroundImage() {
+        const backgroundSection = document.querySelector(".background-section");
+        const newImage = new Image(); // Skapa en ny bild
+        currentIndex = (currentIndex + 1) % images.length;
+        newImage.src = images[currentIndex];
+
+        // När bilden har laddats, byt bakgrund
+        newImage.onload = function () {
+          backgroundSection.style.backgroundImage = `url(${newImage.src})`;
+        };
+
+        newImage.onerror = function () {
+          console.error("Error loading image:", newImage.src);
+        };
+      }
+
+      // Körs när alla bilder är förladdade
+      preloadImages(images, function () {
+        // Starta bildväxlingen efter att alla bilder har laddats
+        setInterval(changeBackgroundImage, 4000); // Byt bild var 4:e sekund
+      });
+
+      // Fadar in hero-sektionen när sidan laddas
+      window.addEventListener("load", function () {
+        document.querySelector(".background-section").classList.add("fade-in");
+      });
+
+
+      window.addEventListener("scroll", function () {
+  var header = document.querySelector(".header");
+
+  if (window.scrollY > 20) { // Skrollar mer innan mörkare bakgrund läggs till
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
     </script>
     
 </body>
