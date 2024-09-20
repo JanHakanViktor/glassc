@@ -147,20 +147,21 @@ body {
   position: relative; /* Se till att den inte överlappar med andra element */
   z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
   background-color: wheat;
-  padding: 100px
+  padding: 50px
 }
 
 main{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 100px;
+    padding-bottom: 25px;
 }
 
 #content-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  flex-direction: row; 
   max-width: 1000px;
   gap: 30px;
   border-style: solid;
@@ -178,8 +179,8 @@ main{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
     }
     
     #bild1 { grid-area: 1 / 2 / 2 / 3; }
@@ -201,11 +202,15 @@ main{
     
 
 #main-container img{
-width: 300px;
+width: 250px;
 height: auto;
 padding: 10px;
 border-radius: 50px;
 }
+
+/* #gallerysection img:hover{
+  transform: scale(1.2);
+} */
 
 
 #gallerysection{
@@ -240,15 +245,16 @@ html{
 }
 
 aside{
-    height: 400px;
+    height: 800px;
     min-height: 200px;
     position: -webkit-sticky;
     position: sticky;
-    top: 15%;
+    top: 170px;
     min-width: 400px;
     margin-right: 100px;
-    padding-top: 50px;
+  
 }
+  
 
 .QA-container{
   display: flex;
@@ -260,7 +266,7 @@ aside{
   border-radius: 50px;
   background-color: #4b4b4b5a;
   position: absolute;
-  padding: 30px;
+  padding: 10px;
   min-width: 400px;
 }
 
