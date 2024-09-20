@@ -1,58 +1,57 @@
 @font-face {
-  font-family: 'MyCustomFont';
-  src: url('assets/OpenSansCondensed-Bold.ttf') format('truetype'),
-       url('assets/OpenSansCondensed-Light.ttf') format('truetype'),
-       url('assets/OpenSansCondensed-LightItalic.ttf') format('truetype');
+  font-family: "MyCustomFont";
+  src: url("assets/OpenSansCondensed-Bold.ttf") format("truetype"),
+       url("assets/OpenSansCondensed-Light.ttf") format("truetype"),
+       url("assets/OpenSansCondensed-LightItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   margin: 0;
-  font-family: 'MyCustomFont', sans-serif; 
+  font-family: "MyCustomFont", sans-serif;
   color: #fff;
-  background-image: url(/assets/pexels-mayday-1425174.jpg);
-  background-size: cover; 
-  background-position: center;
   background-attachment: fixed;
-  position: relative; 
-  transition: background-image 1s ease-in-out; /* Lägger till en mjuk övergång på 1 sekund */
+  overflow-x: hidden; /* Förhindrar sidrullning åt höger om sidan expanderas */
 }
 
-/* Endast vid sidladdning */
-body::before {
-  content: '';
-  position: fixed; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 1); 
-  z-index: 0; 
-  transition: background 3s ease;
+.background-section {
+  background-image: url('/assets/pexels-mayday-1425174.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  position: relative;
+  background-repeat: no-repeat;
+  opacity: 0; /* Startar osynlig */
+  transition: opacity 2s ease, background-image 1s ease-in-out; /* Fadar in över 2 sekunder */
 }
 
-body.loaded::before {
-  background: rgba(255, 255, 255, 0); 
+.background-section.fade-in {
+  opacity: 1; /* Gör sektionen synlig när sidan är laddad */
 }
 
-.header, .meny, .rightmenu {
-  position: relative; 
-  z-index: 1; 
+.header,
+.meny,
+.rightmenu {
+  position: relative;
+  z-index: 1;
 }
 
 .header {
   position: fixed;
   width: 100%;
-  padding: 1rem;
-  z-index: 1000; 
-  position: sticky;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
 
-
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, rgba(35, 34, 34, 0.273) 100%, rgba(82, 82, 82, 0) 100%);
 }
 
 .logo {
-  max-width: 300px; 
+  max-width: 8em;
   height: auto;
   padding: 0.5em 0 0 0.5em;
   position: absolute;
@@ -61,27 +60,26 @@ body.loaded::before {
 
 .meny {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 120px;
   background: linear-gradient(to bottom, rgba(8, 6, 6, 0.8) 0%, rgba(82, 82, 82, 0) 100%);
-
 }
 
 .rightmenu {
   display: flex;
   gap: 15px;
-  align-items: center; 
+  align-items: center;
   text-align: center;
-  flex-grow: 1; 
-  justify-content: center; 
-  list-style: none; 
-  padding: 0; 
+  flex-grow: 1;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
 .rightmenu li {
-  display: flex; 
+  display: flex;
 }
 
 .rightmenu a {
@@ -90,7 +88,7 @@ body.loaded::before {
   display: flex;
   position: relative;
   padding: 10px 15px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .rightmenu h3 {
@@ -102,23 +100,23 @@ body.loaded::before {
   content: "";
   display: block;
   width: 100%;
-  height: 2px; 
-  background-color: white; 
+  height: 2px;
+  background-color: white;
   position: absolute;
-  bottom: -5px; 
+  bottom: -5px;
   left: 0;
-  transform: scaleX(0); 
-  transition: transform 0.3s ease; 
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .rightmenu a:hover::after {
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
 
 @keyframes fadeInAndGrow {
   0% {
     opacity: 0;
-    transform: scale(0.5); /* Startar med halv storlek */
+    transform: scale(0.8); /* Startar med halv storlek */
   }
   100% {
     opacity: 1;
@@ -126,31 +124,38 @@ body.loaded::before {
   }
 }
 .welcome {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 200%;
   text-align: center;
-  padding: 0; 
-  margin-top: 10em;
-  opacity: 0.5;
-  /* background-color: rgba(0, 0, 0, 0.5); Svart, 50% genomskinlig bakgrund */
-  /* border-radius: 10px; / */
+  padding: 0;
+  margin: 0;
+  height: 100%; /* Se till att sektionen täcker hela höjden */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  animation: fadeInAndGrow 1s ease forwards; 
+  animation: fadeInAndGrow 1s ease forwards;
 }
 
-/*Calles ändringar*/
-
-#master-container{
+#master-container {
+  background-color: #fff;
+  padding: 100px;
   display: flex;
   justify-content: center;
-  padding: 100px;
+  position: relative; /* Se till att den inte överlappar med andra element */
+  z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
 }
 
-#content-container{
-    display: flex;
-    padding: 10px;
-    margin: 0 auto;
-    max-width: 1000px;
+#content-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 30px;
+  border-style: solid;
+  background-color: #4b4b4b5a;
+  margin-right: 50px;
+  border-radius: 50px;
 }
 
 #main-container{
@@ -211,6 +216,15 @@ border-radius: 10%;
 
 html{
   scroll-behavior: smooth;
+.colleague {
+  width: 100%;
+  border-radius: 50px;
+}
+
+#sticky-scroll{
+    position: fixed;
+    top: 50px;
+    padding: 20px;
 }
 
 .QA-container{
@@ -236,7 +250,7 @@ html{
     border-radius: 15px;
 }
 
-#menu-container{
+#menu-container {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -271,8 +285,15 @@ footer{
 
 }
 
-@media (min-width: 0px) and (max-width: 576px) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
 
 }
 
+@media (min-width: 1025px) {
+
+    aside{
+        
+    }
+
+}
