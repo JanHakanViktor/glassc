@@ -290,6 +290,21 @@ a{
   color: white;
 }
 
+#scrollToTop {
+  position: fixed;
+  bottom: 1.4em;
+  display: none; /* Döljer knappen initialt */
+  background-color: #000000;
+  opacity: 0.5;
+  transform: translateX(-80%); /* För att justera positioneringen och få den exakt centrerad */
+  left: 20%;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 footer{
   display: flex;
