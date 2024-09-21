@@ -222,7 +222,6 @@ border-radius: 50px;
 
 #main-container img {
   width: 250px;
-  height: auto;
   padding: 10px;
   border-radius: 50px;
 }
@@ -268,7 +267,7 @@ aside{
     min-width: 400px;
     margin-right: 100px;
     padding-top: 50px;
-    margin-bottom: 500px;
+    margin-bottom: 470px;
 }
 
 .QA-container {
