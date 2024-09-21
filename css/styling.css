@@ -142,7 +142,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   background-color: #fff;
-  display: flex;
   justify-content: center;
   position: relative; /* Se till att den inte överlappar med andra element */
   z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
@@ -169,9 +168,6 @@ main{
   border-radius: 50px;
 }
 
-#gallery-container{
-    max-width: 1000px;
-}
 
 #main-container{
     display: grid;
@@ -200,7 +196,7 @@ main{
 
 #main-container img{
 width: 300px;
-height: auto;
+height: 200px;
 padding: 10px;
 border-radius: 50px;
 }
@@ -208,10 +204,11 @@ border-radius: 50px;
 
 #gallerysection{
     /* height: 100vh; */
-    width: auto;
+    width: 1000px;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 50px;
     background-color: antiquewhite;
+    padding-bottom: 20px;
 }
 
 #gallerysection h2{
@@ -244,6 +241,7 @@ aside{
     min-width: 400px;
     margin-right: 100px;
     padding-top: 50px;
+    margin-bottom: 500px;
 }
 
 .QA-container{
@@ -289,28 +287,20 @@ aside{
   margin-top: 2em;
   gap: 1.2em;
   width: 1000px;
-  border: solid black 1px;
 
 }
-  .kontakt {
+
+.kontakt {
   display: block;
   justify-content: center;
   max-width: 1000px;
   gap: 30px;
-  border-style: solid;
   padding: 1em;
   margin: 0;
   background-color: #c702025a;
   border-radius: 50px;
 }
 .karta {
-  display: block;
-  justify-content: center;
-  max-width: 1000px;
-  gap: 30px;
-  border-style: solid;
-  padding: 1em;
-  background-color: #c702025a;
   border-radius: 50px;
 }
 
