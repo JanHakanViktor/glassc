@@ -147,7 +147,7 @@ body {
   position: relative; /* Se till att den inte överlappar med andra element */
   z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
   background-color: wheat;
-  padding-top: 50px;
+  padding-top: 5px;
 }
 
 main{
@@ -162,7 +162,7 @@ main{
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1000px;
-  gap: 30px;
+  gap: 100px;
   border-style: solid;
   background-color: #4b4b4b5a;
   margin-right: 50px;
