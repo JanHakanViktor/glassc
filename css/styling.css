@@ -13,8 +13,6 @@ body {
   color: #fff;
   background-attachment: fixed;
   /* overflow-x: hidden; Förhindrar sidrullning åt höger om sidan expanderas */
-  overflow-x: hidden; /* Förhindrar sidrullning åt höger om sidan expanderas */
-  background-color: wheat;
 }
  
 .background-section {
@@ -358,6 +356,51 @@ html {
   flex-direction: column;
   align-items: center;
   border-radius: 50px;
+  background-color: #4b4b4b5a;
+  position: absolute;
+  padding: 10px;
+  min-width: 400px;
+}
+
+.item {
+  max-width: 400px;
+  text-align: center;
+  margin: 15px;
+}
+
+.colleague {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#menu-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(206, 206, 206, 0.413);
+  height: 20px;
+  width: 400px;
+  gap: 20px;
+  border-style: solid;
+  border-radius: 15px;
+}
+
+#oppettider-container {
+  display: flex;
+  margin-top: 2em;
+  gap: 1.2em;
+  width: 100%;
+  max-width: 1000px;
+}
+
+
+.kontakt, .googlemaps {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
 }
 
 .kontakt {
@@ -382,23 +425,14 @@ html {
   border-radius: 50px;
 
 }
-.karta {
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
- 
-.kontakt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 1em;
-  margin: 0;
+.googlemaps {
+  display: block;
+  justify-content: center;
+  max-width: 1000px;
+  gap: 30px;
   border-radius: 50px;
   
 }
- 
 .opening-hours {
   list-style: none;
   padding: 0;
