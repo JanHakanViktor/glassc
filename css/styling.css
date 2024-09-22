@@ -304,7 +304,8 @@ html {
   padding: 1em;
   margin: 0;
   border-radius: 50px;
-  
+  margin: 15px 0 0 35px; /* Lägg till en vänstermarginal på 10px */
+
 }
  
 .opening-hours {
