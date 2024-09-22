@@ -13,6 +13,7 @@ body {
   color: #fff;
   background-attachment: fixed;
   overflow-x: hidden; /* Förhindrar sidrullning åt höger om sidan expanderas */
+  background-color: wheat;
 }
 
 .background-section {
@@ -148,20 +149,21 @@ body {
 
 #master-container {
   display: flex;
-  justify-content: space-evenly;
-  background-color: #fff;
   justify-content: center;
-  z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
   background-color: wheat;
   padding-top: 5px;
-  padding: 50px;
+  margin-top: 50px;
 }
 
 main {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 50px;
-  padding-bottom: 25px;
+  align-items: center;
+  flex: wrap;
+  padding: 25px;
+  flex-basis: 70%;
+  max-width: 1000px;
 }
 
 #content-container {
@@ -169,10 +171,9 @@ main {
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: row;
-  max-width: 1000px;
+  width: 1000px;
   border-style: solid;
   background-color: #4b4b4b5a;
-  margin-right: 50px;
   border-radius: 50px;
 }
 
@@ -187,6 +188,28 @@ main {
   border-radius: 50px;
 }
 
+
+aside{
+  display: flex;
+  height: 25vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15%;
+  flex-basis: 400px;
+}
+
+.QA-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+max-width: 300px;
+border-style: solid;
+border-radius: 50px;
+background-color: #4b4b4b5a;
+position: absolute;
+padding: 30px;
+}
 
 #main-container{
     display: grid;
@@ -242,7 +265,6 @@ border-radius: 50px;
   max-width: 1000px;
   border-radius: 50px;
   background-color: rgba(250, 235, 215, 0);
-  margin-right: 50px;
 }
 
 #gallerysection h2 {
@@ -316,29 +338,6 @@ a {
   color: white;
 }
 
-aside{
-  height: 25vh;
-  min-height: 200px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 15%;
-}
-
-.QA-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-max-width: 300px;
-border-style: solid;
-border-radius: 50px;
-background-color: #4b4b4b5a;
-position: absolute;
-padding: 30px;
-width: 300px;
-}
-
-
 #footer-container {
   display: flex;
   justify-content: space-evenly;
@@ -402,6 +401,7 @@ footer {
     align-items: center;
     justify-content: center;
   }
+  
     #side-nav{
         height: 100%; /* Full-height */
           width: 135px; /* Initially hidden */
