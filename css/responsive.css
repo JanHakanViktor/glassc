@@ -1,0 +1,115 @@
+/* Anpassa bakgrundsbilden för mobiler */
+@media (max-width: 480px) {
+  .background-section {
+    background-size: contain;
+    background-position: top;
+  }
+}
+/* För mobila enheter: justera textstorlek och mellanrum */
+@media (max-width: 480px) {
+  .welcome h1 {
+    font-size: 24px;
+  }
+
+  .welcome h2 {
+    font-size: 18px;
+  }
+
+  .welcome {
+    padding: 20px;
+  }
+}
+
+/* För tablets: medelstor text */
+@media (min-width: 481px) and (max-width: 768px) {
+  .welcome h1 {
+    font-size: 32px;
+  }
+
+  .welcome h2 {
+    font-size: 24px;
+  }
+}
+
+/* För desktop: större text och generösare mellanrum */
+@media (min-width: 769px) {
+  .welcome h1 {
+    font-size: 48px;
+  }
+
+  .welcome h2 {
+    font-size: 36px;
+  }
+
+  .welcome {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 430px) {
+  #main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #side-nav {
+    height: 100%; /* Full-height */
+    width: 50px; /* Initially hidden */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black background color */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 60px; /* Place content 60px from the top */
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav.open {
+    width: 250px; /* Define the width when open */
+  }
+
+  .master-container {
+    transition: margin-left 0.5s;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+@media (min-width: 1025px) {
+  aside {
+  }
+}
+
+
+@media (max-width: 768px) {
+    #oppettider-container {
+      flex-direction: column; /* Stack items */
+      align-items: center; /* Center items */
+    }
+  
+    .kontakt {
+      max-width: 90%; /* Full width for small screens */
+    }
+  
+    .googlemaps {
+      width: 100%; /* Make the map responsive */
+      height: auto; /* Adjust height automatically */
+    }
+  }
+  

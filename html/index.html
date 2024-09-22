@@ -6,6 +6,7 @@
     <title>Åsas Glasscafé</title>
     <link rel="stylesheet" href="/css/font.css" />
     <link rel="stylesheet" href="/css/styling.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
   </head>
   <body>
     <div class="background-section">
@@ -14,7 +15,6 @@
         <nav id="side-nav" class="meny">
           <ul class="rightmenu">
             <li>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             </li>
             <li>
                 <a href="#start"><h3>START</h3></a>
@@ -27,7 +27,6 @@
             </li>
           </ul>
         </nav>
-
       </header>
       <div class="welcome">
         <h1>Välkommen till Åsa Glasscafé</h1>
@@ -96,11 +95,11 @@
             <img id="bild14" class="img-fluid" src="/assets/personaldisk.jpg" alt="jobba i baren">
             <img id="bild15" class="img-fluid" src="/assets/glassbil.jpg" alt="glassbil">
             </div>
-            </section>
-          </div>
+          </section>
+        </div>
              
-          <div id="oppetider-container">
-            <div class="kontakt">
+        <div id="oppettider-container">
+           <div class="kontakt">
               <h2>Öppetider</h2>
               <p>Våra öppettider kan variera under vårsäsongen.</p>
               <ul class="opening-hours">
@@ -111,7 +110,7 @@
               <p>Mail: <a href="mailto:asaglasscafe@yahoo.com">asaglasscafe@yahoo.com</a></p>
               <p>Vi svarar på mail och sociala medier i den mån vi hinner.</p>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4137.0439159073585!2d12.122525149104886!3d57.348665244682856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464fdc6608febfc7%3A0x5e26fa61229715e3!2zw4VzYSBHbGFzc2NhZsOp!5e1!3m2!1ssv!2sse!4v1726839111356!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4137.0439159073585!2d12.122525149104886!3d57.348665244682856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464fdc6608febfc7%3A0x5e26fa61229715e3!2zw4VzYSBHbGFzc2NhZsOp!5e1!3m2!1ssv!2sse!4v1726839111356!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </section>
         </div>
         </main>
@@ -258,8 +257,6 @@ document.getElementById("scrollToTop").onclick = function() {
     behavior: 'smooth' // Gör scrollningen mjuk
   });
 };
-
-
     </script>
     
 </body>
