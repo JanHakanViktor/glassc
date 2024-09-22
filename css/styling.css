@@ -358,6 +358,13 @@ footer {
   background-color: wheat;
 }
 
+#menu-container{
+  display: flex;
+  align-self: center;
+  width: 1000px;
+  height: 50px;
+}
+
 .footer-item{
   background-color: rgba(255, 255, 255, 0.356);
   display: flex;
@@ -368,13 +375,6 @@ footer {
   border: 2px solid rgb(255, 255, 255);
   border-radius: 50px;
   padding: 10px;
-}
-
-#menu-container{
-  display: flex;
-  align-self: center;
-  width: 1000px;
-  height: 50px;
 }
 
 #scrollToTop {
@@ -393,9 +393,6 @@ footer {
   border-radius: 5px;
   cursor: pointer;
 }
-
-
-
 
 
 @media (max-width: 430px) {
