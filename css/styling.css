@@ -3,7 +3,7 @@ body {
   font-family: "MyCustomFont", sans-serif;
   color: #fff;
   background-attachment: fixed;
-  overflow-x: hidden; /* Förhindrar sidrullning åt höger om sidan expanderas */
+  /* overflow-x: hidden; Förhindrar sidrullning åt höger om sidan expanderas */
 }
 
 .background-section {
@@ -325,9 +325,19 @@ aside {
   display: flex;
   margin-top: 2em;
   gap: 1.2em;
-  width: 1000px;
-  /* border: solid black 1px; */
+  width: 100%;
+  max-width: 1000px;
 }
+
+
+.kontakt, .googlemaps {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+}
+
 .kontakt {
   display: flex;
   flex-direction: column;
@@ -341,29 +351,13 @@ aside {
   border-radius: 50px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-.karta {
+.googlemaps {
   display: block;
   justify-content: center;
   max-width: 1000px;
   gap: 30px;
-  border-style: solid;
-  padding: 1em;
-  background-color: #c702025a;
   border-radius: 50px;
 }
-
-.kontakt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 1em;
-  margin: 0;
-  background-color: rgba(75, 75, 75, 0.35);
-  border-radius: 50px;
-}
-
 .opening-hours {
   list-style: none;
   padding: 0;
