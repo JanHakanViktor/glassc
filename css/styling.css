@@ -151,7 +151,6 @@ body {
   justify-content: space-evenly;
   background-color: #fff;
   justify-content: center;
-  position: relative; /* Se till att den inte överlappar med andra element */
   z-index: 1; /* Lägger den ovanför bakgrunden om det behövs */
   background-color: wheat;
   padding-top: 5px;
@@ -174,6 +173,17 @@ main {
   border-style: solid;
   background-color: #4b4b4b5a;
   margin-right: 50px;
+  border-radius: 50px;
+}
+
+.item {
+  max-width: 400px;
+  text-align: center;
+  margin: 15px;
+}
+
+.colleague {
+  width: 100%;
   border-radius: 50px;
 }
 
@@ -249,44 +259,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.colleague {
-  width: 100%;
-  border-radius: 50px;
-}
-
-aside{
-    height: 25vh;
-    min-height: 200px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 15%;
-}
-
-.QA-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 300px;
-  border-style: solid;
-  border-radius: 50px;
-  background-color: #4b4b4b5a;
-  position: absolute;
-  padding: 30px;
-  width: 300px;
-}
-
-.item {
-  max-width: 400px;
-  text-align: center;
-  margin: 15px;
-}
-
-.colleague {
-  width: 100%;
-  border-radius: 15px;
-}
-
 #oppetider-container {
   display: flex;
   gap: 1.2em;
@@ -344,22 +316,28 @@ a {
   color: white;
 }
 
-#scrollToTop {
-  position: fixed;
-  bottom: 1.4em;
-  display: none; /* Döljer knappen initialt */
-  background-color: #000000;
-  opacity: 0.5;
-  transform: translateX(
-    -80%
-  ); /* För att justera positioneringen och få den exakt centrerad */
-  left: 20%;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
+aside{
+  height: 25vh;
+  min-height: 200px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15%;
 }
+
+.QA-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+max-width: 300px;
+border-style: solid;
+border-radius: 50px;
+background-color: #4b4b4b5a;
+position: absolute;
+padding: 30px;
+width: 300px;
+}
+
 
 #footer-container {
   display: flex;
@@ -375,6 +353,7 @@ a {
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px;
   background-color: wheat;
 }
@@ -397,6 +376,27 @@ footer {
   width: 1000px;
   height: 50px;
 }
+
+#scrollToTop {
+  position: fixed;
+  bottom: 1.4em;
+  display: none; /* Döljer knappen initialt */
+  background-color: #000000;
+  opacity: 0.5;
+  transform: translateX(
+    -80%
+  ); /* För att justera positioneringen och få den exakt centrerad */
+  left: 20%;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
 
 @media (max-width: 430px) {
   #main-container {
