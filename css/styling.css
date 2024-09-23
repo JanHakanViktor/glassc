@@ -44,7 +44,7 @@ body.fade-in {
     to bottom,
     rgba(35, 34, 34, 0.273) 100%,
     rgba(82, 82, 82, 0) 100%
-  );
+  )
 }
  
 .logo {
@@ -145,7 +145,6 @@ body.fade-in {
   margin: 0 auto; 
   max-width: 100%; 
   width: 100%; 
-  /* border: 2px solid #fff; */
 }
  
 main {
@@ -163,9 +162,8 @@ main {
   flex-wrap: wrap;
   flex-direction: row;
   max-width: 1000px;
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto; 
   border-radius: 50px;
-  /* border: 2px solid #fff; */
   row-gap: 5em;
 }
  
@@ -176,7 +174,7 @@ main {
   flex-wrap: wrap;
   flex-direction: row;
   max-width: 1000px;
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto; 
   border-radius: 50px;
   background-color: rgba(75, 75, 75, 0.35);
   border: 2px solid #fff;
@@ -217,14 +215,6 @@ main {
   position: absolute;
   padding: 30px;
   backdrop-filter: blur(20px)
-}
- 
-#main-container{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
 }
    
 #gallerysection {
