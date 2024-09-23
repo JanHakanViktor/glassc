@@ -1,30 +1,33 @@
 
-html, body {
-  overflow-x: hidden; /* Prevent horizontal scrollbars */
-}
+/* html, body {
+  overflow-x: hidden; 
+} */
 body {
   margin: 0;
   font-family: "MyCustomFont", sans-serif;
   color: #fff;
   background-attachment: fixed;
-  background-color: wheat;
-}
- 
-.background-section {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
   background-image: url("/assets/pexels-mayday-1425174.jpg");
   background-size: cover;
   background-position: center;
+}
+ 
+/* .background-section {
   height: 100vh;
   position: relative;
   background-repeat: no-repeat;
-  opacity: 0; /* Startar osynlig */
-  transition: opacity 2s ease, background-image 1s ease-in-out; /* Fadar in över 2 sekunder */
-}
+  opacity: 0; 
+  transition: opacity 2s ease, background-image 1s ease-in-out; 
+} */
  
-.background-section.fade-in {
-  opacity: 1; /* Gör sektionen synlig när sidan är laddad */
+body.fade-in {
+  opacity: 1; /* Fades in the body background on page load */
 }
- 
+
 .header,
 .meny,
 .rightmenu {
@@ -134,9 +137,8 @@ body {
   justify-content: center;
   font-size: 200%;
   text-align: center;
-  padding: 0;
-  margin: 0;
-  height: 100%; /* Se till att sektionen täcker hela höjden */
+  height: calc(100vh - 120px); /* Adjust based on header height */
+  padding-top: 120px; /* Offset by the height of the header */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
   animation: fadeInAndGrow 1s ease forwards;
 }
@@ -144,11 +146,11 @@ body {
 #master-container {
   display: flex;
   justify-content: space-evenly;
-  background-color: wheat;
   padding-top: 5px;
-  margin-top: 50px;
+  margin: 0 auto; /* Center horizontally */
   max-width: 100%; 
   width: 100%; 
+  border: 2px solid #fff;
 }
  
 main {
@@ -157,18 +159,18 @@ main {
   flex-direction: column;
   align-items: center;
   max-width: 1000px;
-  margin-right: 25px;
+  margin: 0 auto; /* Center horizontally */
 }
- 
+
 #content-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: row;
   max-width: 1000px;
-  border-style: solid;
-  background-color: #4b4b4b5a;
+  margin: 0 auto; /* Center horizontally */
   border-radius: 50px;
+  border: 2px solid #fff;
 }
  
 .item {
@@ -387,35 +389,8 @@ footer {
     justify-content: center;
   }
  
-    #side-nav{
-        height: 100%; /* Full-height */
-          width: 135px; /* Initially hidden */
-          position: fixed; /* Stay in place */
-          z-index: 1; /* Sit on top */
-          top: 0;
-          left: 0;
-          background-color: #0000003c; /* Black background color */
-          overflow-x: hidden; /* Disable horizontal scrolling */
-          transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-          padding-top: 60px; /* Place content 60px from the top */
-        }
+
  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
- 
-  .sidenav.open {
-    width: 250px; /* Define the width when open */
-  }
- 
-          .sidenav.open {
-            width: 578px; /* Define the width when open */
-          }
- 
-          .master-container{
-            transition: margin-left 0.5s;
-          }
-}
  
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
  

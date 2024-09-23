@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/css/styling.css" />
   </head>
   <body>
-    <div class="background-section">
       <header class="header">
         <img class="logo" src="/assets/logotyp.png" alt="Café Logo" />
         <nav id="side-nav" class="meny">
@@ -24,15 +23,14 @@
             </li>
           </ul>
         </nav>
- 
       </header>
-      <div class="welcome">
-        <h1>Välkommen till Åsa Glasscafé</h1>
-        <h2>Ett paradis för glassälskare</h2>
-      </div>
-    </div>
     <div id="master-container">
-      <main>
+      
+    <main>
+        <div class="welcome">
+          <h1>Välkommen till Åsa Glasscafé</h1>
+          <h2>Ett paradis för glassälskare</h2>
+        </div>
           <div id="content-container">
             <section class="item">
               <h3>Så roligt att just du har hittat hit!</h3>
@@ -70,7 +68,24 @@
             </div>
    
           </div>
-             
+          <div id="oppetider-container">
+            <div class="kontakt">
+              <h2>Öppetider</h2>
+                <p>Våra öppettider kan variera under vårsäsongen.</p>
+                <ul class="opening-hours">
+                  <li>Tisdag - Fredag: 13:00 - 18:00</li>
+                  <li>Lördag - Söndag: 12:00 - 18:00</li>
+                </ul>
+                <p>Sörviksvägen 3, Åsa, Sweden 43954</p>
+                <p>Mail: <a href="mailto:asaglasscafe@yahoo.com">asaglasscafe@yahoo.com</a></p>
+                <p>Vi svarar på mail och sociala medier i den mån vi hinner.</p>
+            </div>
+            <iframe class="karta" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4137.0439159073585!2d12.122525149104886!3d57.348665244682856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464fdc6608febfc7%3A0x5e26fa61229715e3!2zw4VzYSBHbGFzc2NhZsOp!5e1!3m2!1ssv!2sse!4v1726839111356!5m2!1ssv!2sse" width="500" height="450" style="border:-0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+          </div>   
+
+
+
         <section id="gallerysection">
             <h2>Bildgalleri</h2>
    
@@ -93,24 +108,10 @@
             </div>
         </section>
  
-        <div id="oppetider-container">
-          <div class="kontakt">
-            <h2>Öppetider</h2>
-              <p>Våra öppettider kan variera under vårsäsongen.</p>
-              <ul class="opening-hours">
-                <li>Tisdag - Fredag: 13:00 - 18:00</li>
-                <li>Lördag - Söndag: 12:00 - 18:00</li>
-              </ul>
-              <p>Sörviksvägen 3, Åsa, Sweden 43954</p>
-              <p>Mail: <a href="mailto:asaglasscafe@yahoo.com">asaglasscafe@yahoo.com</a></p>
-              <p>Vi svarar på mail och sociala medier i den mån vi hinner.</p>
-          </div>
-          <iframe class="karta" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4137.0439159073585!2d12.122525149104886!3d57.348665244682856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464fdc6608febfc7%3A0x5e26fa61229715e3!2zw4VzYSBHbGFzc2NhZsOp!5e1!3m2!1ssv!2sse!4v1726839111356!5m2!1ssv!2sse" width="500" height="450" style="border:-0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        </div>
+      
       </main>
 
-         <aside>
+         <!-- <aside>
           <section class="QA-container">
             <h3>Vanliga frågor:</h3>
               <div class="pay">
@@ -138,7 +139,7 @@
                   <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
               </div>
           </section>
-        </aside>
+        </aside> -->
     </div> 
  
  <footer>
@@ -149,78 +150,75 @@
         <a href="#Start" class="footer-item">KONTAKT</a>
       </div>
     </footer>
-
-    <script>
-      // Bildlista
-      const images = [
-        "/assets/pexels-goumbik-1352296.jpg",
-        "/assets/pexels-jeshoots-3631.jpg",
-        "/assets/pexels-mayday-1425174.jpg",
-        "/assets/pexels-roman-odintsov-5061036.jpg",
-        "/assets/pexels-jean-balzan-210755-675439.jpg"
-      ];
- 
-      // Förladdning av bilder
-      function preloadImages(imageArray, callback) {
-        let loadedImages = 0;
-        let totalImages = imageArray.length;
- 
-        imageArray.forEach(function (src) {
-          const img = new Image();
-          img.src = src;
-          img.onload = function () {
-            loadedImages++;
-            if (loadedImages === totalImages) {
-              callback(); // Kör callback när alla bilder är förladdade
-            }
-          };
-          img.onerror = function () {
-            console.error("Error loading image:", src);
-          };
-        });
-      }
- 
-      let currentIndex = 0;
- 
-      // Byter bakgrundsbild
-      function changeBackgroundImage() {
-        const backgroundSection = document.querySelector(".background-section");
-        const newImage = new Image(); // Skapa en ny bild
-        currentIndex = (currentIndex + 1) % images.length;
-        newImage.src = images[currentIndex];
- 
-        // När bilden har laddats, byt bakgrund
-        newImage.onload = function () {
-          backgroundSection.style.backgroundImage = `url(${newImage.src})`;
+<script>
+    // Bildlista
+    const images = [
+      "/assets/pexels-goumbik-1352296.jpg",
+      "/assets/pexels-jeshoots-3631.jpg",
+      "/assets/pexels-mayday-1425174.jpg",
+      "/assets/pexels-roman-odintsov-5061036.jpg",
+      "/assets/pexels-jean-balzan-210755-675439.jpg"
+    ];
+    
+    // Förladdning av bilder
+    function preloadImages(imageArray, callback) {
+      let loadedImages = 0;
+      let totalImages = imageArray.length;
+    
+      imageArray.forEach(function (src) {
+        const img = new Image();
+        img.src = src;
+        img.onload = function () {
+          loadedImages++;
+          if (loadedImages === totalImages) {
+            callback(); // Kör callback när alla bilder är förladdade
+          }
         };
- 
-        newImage.onerror = function () {
-          console.error("Error loading image:", newImage.src);
+        img.onerror = function () {
+          console.error("Error loading image:", src);
         };
+      });
+    }
+    
+    let currentIndex = 0;
+    
+    // Byter bakgrundsbild
+    function changeBackgroundImage() {
+      const bodyElement = document.querySelector("body"); // Target the body element
+      const newImage = new Image(); // Skapa en ny bild
+      currentIndex = (currentIndex + 1) % images.length;
+      newImage.src = images[currentIndex];
+    
+      // När bilden har laddats, byt bakgrund
+      newImage.onload = function () {
+        bodyElement.style.backgroundImage = `url(${newImage.src})`;
+      };
+    
+      newImage.onerror = function () {
+        console.error("Error loading image:", newImage.src);
+      };
+    }
+    
+    // Körs när alla bilder är förladdade
+    preloadImages(images, function () {
+      // Starta bildväxlingen efter att alla bilder har laddats
+      setInterval(changeBackgroundImage, 4000); // Byt bild var 4:e sekund
+    });
+    
+    // Fadar in hero-sektionen när sidan laddas
+    window.addEventListener("load", function () {
+      document.querySelector("body").classList.add("fade-in"); // Optionally add fade-in to the body
+    });
+    
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".header");
+    
+      if (window.scrollY > 20) { // Skrollar mer innan mörkare bakgrund läggs till
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
       }
- 
-      // Körs när alla bilder är förladdade
-      preloadImages(images, function () {
-        // Starta bildväxlingen efter att alla bilder har laddats
-        setInterval(changeBackgroundImage, 4000); // Byt bild var 4:e sekund
-      });
- 
-      // Fadar in hero-sektionen när sidan laddas
-      window.addEventListener("load", function () {
-        document.querySelector(".background-section").classList.add("fade-in");
-      });
- 
- 
-      window.addEventListener("scroll", function () {
-  const header = document.querySelector(".header");
- 
-  if (window.scrollY > 20) { // Skrollar mer innan mörkare bakgrund läggs till
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-    </script>
-   
+    });
+   </script>
 </body>
 </html>
