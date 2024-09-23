@@ -5,28 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Åsas Glasscafé</title>
     <link rel="stylesheet" href="/css/font.css" />
-    <!-- <link rel="stylesheet" href="/css/styling.css" /> -->
-    <link rel="stylesheet" href="/css/fontstyle.css"/>
-    <link rel="stylesheet" href="/css/test.css"/>
-    
+    <link rel="stylesheet" href="/css/fontstyle.scss" />
+    <link rel="stylesheet" href="/css/styling.css" />
   </head>
   <body>
-      <header class="header">
-        <img class="logo" src="/assets/logotyp.png" alt="Café Logo" />
-        <nav id="side-nav" class="meny">
-          <ul class="rightmenu">
-            <li>
-                <a href="#start"><h3>START</h3></a>
-            </li>
-            <li>
-              <a href="#gallerysection"><h3>BILDGALLERI</h3></a>
-            </li>
-            <li>
-              <a href="#oppetider-container"><h3>ÖPPETTIDER</h3></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+    <header class="header">
+      <img class="logo" src="/assets/logotyp.png" alt="Café Logo" />
+      <nav id="side-nav" class="meny">
+        <ul class="rightmenu">
+          <li><a href="#content-container"><h3>START</h3></a></li>
+          <li><a href="#oppetider-container"><h3>ÖPPETTIDER</h3></a></li>
+          <li><a href="#gallerysection"><h3>BILDGALLERI</h3></a></li>
+        </ul>
+      </nav>
+    </header>
+    
   <div id="master-container">
     <main>
       <div id="content-container">
@@ -54,13 +47,34 @@
             </a>
           </section>
           <section class="item">
-            <h3>
+            <h3>Så roligt att just du har hittat hit!</h3>
+            <p>
+              Vi ser fram emot att få hälsa just Dig välkommen till vårt
+              glassparadis.
+            </p>
+          </section>
+          <section class="item">
+            <h3>Följ oss gärna på Instagram och Facebook</h3>
+
+            <a href="https://www.facebook.com/asa.glasscafe/?locale=sv_SE">
+              <img class="social-media" src="/assets/fb.png" alt="Facebook" />
+            </a>
+
+            <a href="https://www.instagram.com/glasscafe/">
+              <img class="social-media" src="/assets/ig.png" alt="Facebook" />
+            </a>
+          </section>
+          <section class="item">
+            <p>
               Vi erbjuder kulglass i 36 olika smaker, mjukglass, milkshake,
               läckra uppläggningar och såklart massor av goa tillbehör! All vår
-              glass tillverkas av Sia Glass i Halländska Slöinge. Är du
-              allergisk är det bara att säga till, så hjälper vi dig så gott vi
-              kan. Vi tar tacksamt emot tips om det är något du saknar. Vårt mål
-              är att alla ska kunna fika här!
+              glass tillverkas av Sia Glass i Halländska Slöinge.
+            </p>
+              <p>
+                Är du allergisk är det bara att säga till, så hjälper vi dig så gott vi
+                kan. Vi tar tacksamt emot tips om det är något du saknar. Vårt mål
+                är att alla ska kunna fika här!
+              </p>
             </h3>
           </section>
           <div class="item">
@@ -161,16 +175,13 @@
          
     </div> 
   </div>
-
- <footer>
-      <div>
-        <a href="#content-container" class="footer-item">START</a>
-        <a href="#gallerysection" class="footer-item">BILDGALLERI</a>
-        <a href="#oppetider-container" class="footer-item">KONTAKT</a>
-      </div>
-  </footer>
-
-
+  <footer>
+    <div>
+      <a href="#content-container" class="footer-item">START</a>
+      <a href="#oppetider-container" class="footer-item">KONTAKT</a>
+      <a href="#gallerysection" class="footer-item">BILDGALLERI</a>
+    </div>
+</footer>
 <script>
     // Bildlista
     const images = [
