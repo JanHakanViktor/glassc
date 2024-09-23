@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Åsas Glasscafé</title>
     <link rel="stylesheet" href="/css/font.css" />
-    <link rel="stylesheet" href="/css/fontstyle.css" />
+    <link rel="stylesheet" href="/css/fontstyle.scss" />
     <link rel="stylesheet" href="/css/styling.css" />
   </head>
   <body>
@@ -13,9 +13,9 @@
       <img class="logo" src="/assets/logotyp.png" alt="Café Logo" />
       <nav id="side-nav" class="meny">
         <ul class="rightmenu">
-          <li><a href="#start"><h3>START</h3></a></li>
+          <li><a href="#content-container"><h3>START</h3></a></li>
+          <li><a href="#oppetider-container"><h3>ÖPPETTIDER</h3></a></li>
           <li><a href="#gallerysection"><h3>BILDGALLERI</h3></a></li>
-          <li><a href="#oppettider"><h3>ÖPPETTIDER</h3></a></li>
         </ul>
       </nav>
     </header>
@@ -124,45 +124,45 @@
       </div>
     </main>
     
-     <aside class="sticky-sidebar">
-        <section class="q-container">
-          <h3 class="question">Vanliga frågor:</h3>
-            <div class="q-item">
-                <h4>Kan man betala med kort hos er ?</h4>
-                <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
-            </div>
-            <div class="q-item">
-                <h4>Har ni laktosfria alternativ?</h4>
-                <p>- Ja. Vi har flera laktosfria gräddglassar och helt mjölkfria sorbeter. Vår mjukglass är också helt laktosfri.</p>
-            </div>
-            <div class="q-item">
-                <h4>Har ni mjölkfria alternativ?</h4>
-                <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
-            </div>
-            <div class="q-item">
-                <h4>Har ni veganglass?</h4>
-                <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
-            </div>
-            <div class="q-item">
-                <h4>Får man ta med sig hunden?</h4>
-                <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
-            </div>
-            <div class="q-item">
-                <h4>Hur vet man om ni fortfarande har öppet på kvällen?</h4>
-                <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
-            </div>
-        </section>
-      </aside>
+    <aside id="sticky-sidebar">
+      <section class="q-container">
+        <h3 class="question">Vanliga frågor:</h3>
+          <div class="q-item">
+              <h4>Kan man betala med kort hos er ?</h4>
+              <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+          </div>
+          <div class="q-item">
+              <h4>Har ni laktosfria alternativ?</h4>
+              <p>- Ja. Vi har flera laktosfria gräddglassar och helt mjölkfria sorbeter. Vår mjukglass är också helt laktosfri.</p>
+          </div>
+          <div class="q-item">
+              <h4>Har ni mjölkfria alternativ?</h4>
+              <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+          </div>
+          <div class="q-item">
+              <h4>Har ni veganglass?</h4>
+              <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+          </div>
+          <div class="q-item">
+              <h4>Får man ta med sig hunden?</h4>
+              <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+          </div>
+          <div class="q-item">
+              <h4>Hur vet man om ni fortfarande har öppet på kvällen?</h4>
+              <p>- Ja. Vi tar emot både kort och swish, samt presentkort.</p>
+          </div>
+      </section>
+    </aside>
          
     </div> 
   </div>
- <footer>
-    <div id="footer-container">
-        <a href="#meny" class="footer-item">START</a>
-        <a href="#Start" class="footer-item">BILDGALLERI</a>
-        <a href="#Start" class="footer-item">KONTAKT</a>
-      </div>
-    </footer>
+  <footer>
+    <div>
+      <a href="#content-container" class="footer-item">START</a>
+      <a href="#oppetider-container" class="footer-item">KONTAKT</a>
+      <a href="#gallerysection" class="footer-item">BILDGALLERI</a>
+    </div>
+</footer>
 <script>
     // Bildlista
     const images = [
