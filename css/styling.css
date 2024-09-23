@@ -189,9 +189,6 @@ aside{
   display: flex;
   justify-content: center;
   width: fit-content;
-  
-  
-  
 }
  
 .QA-container {
@@ -220,6 +217,7 @@ padding: 30px;
   border-radius: 50px;
   background-color: antiquewhite;
   padding-bottom: 20px;
+  
   
 }
  
@@ -387,16 +385,33 @@ footer {
   border-radius: 5px;
   cursor: pointer;
 } 
-@media (max-width: 430px) {
+
+@media (max-width: 600px) {
   #main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
   }
 
   #main-container img{
     width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px){
+  #main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #main-container img{
+    width: 40%;
     height: auto;
   }
 }
