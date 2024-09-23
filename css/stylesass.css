@@ -348,6 +348,9 @@ footer {
     flex: 45%;
     max-width: 50%;
   }
+  .logo {
+    display: none;
+  }
 }
 @media (max-width: 430px) {
   #main-container {
@@ -466,4 +469,4 @@ footer {
   .welcome {
     width: 600px;
   }
-}/*# sourceMappingURL=styling.css.map */
+}/*# sourceMappingURL=stylesass.css.map */
