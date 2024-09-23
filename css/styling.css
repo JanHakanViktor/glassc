@@ -152,7 +152,7 @@ body.fade-in {
   margin: 0 auto; 
   max-width: 100%; 
   width: 100%; 
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
 }
  
 main {
@@ -172,7 +172,7 @@ main {
   max-width: 1000px;
   margin: 0 auto; /* Center horizontally */
   border-radius: 50px;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
   row-gap: 5em;
 }
  
@@ -184,6 +184,7 @@ main {
   max-width: 1000px;
   margin: 0 auto; /* Center horizontally */
   border-radius: 50px;
+  background-color: rgba(75, 75, 75, 0.35);
   border: 2px solid #fff;
 }
 .item {
@@ -198,7 +199,7 @@ main {
 }
  
  
-aside{
+.sticky-sidebar{
   display: flex;
   width: 400px;
   height: 0;
@@ -207,7 +208,7 @@ aside{
   top: 15%;
 }
  
-.QA-container {
+.q-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -292,9 +293,9 @@ html {
 #oppetider-container {
   display: flex;
   gap: 1.2em;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 1000px; /* Replace fixed width */
-  justify-content: space-between;
+  width: 100%; /* Replace fixed width */
   background-color: rgba(75, 75, 75, 0.35);
   border-style: solid;
   /* border: solid black 1px; */
@@ -305,18 +306,20 @@ html {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
- 
+.karta, .kontakt {
+  flex-grow: 1; /* Both elements take equal space */
+  flex-basis: 0; /* Prevents the elements from shrinking unevenly */
+}
 .kontakt {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 1em;
+
   margin: 0;
   border-radius: 50px;
   margin: 15px 0 0 35px; /* Lägg till en vänstermarginal på 10px */
-
 }
  
 .opening-hours {
@@ -385,38 +388,32 @@ footer {
     align-items: center;
     justify-content: center;
   }
- 
-  @media (max-width: 600px) {
+  .logo {
+    display: none;
+     }
+}
+@media (max-width: 600px) {
     #main-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
     }
-   
+    .karta {
+      border-bottom-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+      border-top-right-radius: 0;
+     }  
     #main-container img{
       width: 80%;
       height: auto;
     }
-   
-    @media (max-width: 430px) {
-      #side-bar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      @media (max-width: 430px) {
-        .logo {
-          display: none;
-        }
-
+  
   #content-container{
     max-width: 450px;
     font-size: 14px;
   }
-   
+
   .item{
     font-size: large;
   }
@@ -429,18 +426,18 @@ footer {
     margin: 0 auto;
   }
    
-   .q-container{
+ .q-container{
       width:400px;
       height: 800px;
       flex-wrap: wrap;
     }
    
-    .q-item h4{
+ .q-item h4{
       font-size: 18px;
       margin-bottom: 5px;
     }
    
-    .question{
+ .question{
       font-size: 40px;
       font-weight:900;
       color: crimson;
@@ -457,8 +454,7 @@ footer {
       font-weight:900;
     }
   }
- 
- 
+
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
  
   #master-container{
