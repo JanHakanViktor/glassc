@@ -11,7 +11,7 @@
   <body>
     <header class="header">
       <img class="logo" src="/assets/logotyp.png" alt="Café Logo" />
-      <nav id="side-nav" class="meny">
+      <nav id="side-nav" class="meny" aria-label="Huvudmeny">
         <ul class="rightmenu">
           <li><a href="#content-container">START</a></li>
           <li><a href="#oppetider-container">ÖPPETTIDER</a></li>
@@ -38,11 +38,11 @@
           <section class="item">
             <h3>Följ oss gärna på Instagram och Facebook</h3>
     
-            <a href="https://www.facebook.com/asa.glasscafe/?locale=sv_SE">
-              <img class="social-media" src="/assets/fb.png" alt="Facebook" />
+            <a href="https://www.facebook.com/asa.glasscafe/?locale=sv_SE" aria-label="Följ oss på Facebook">
+              <img class="social-media" src="/assets/fb.png" alt="Facebook logotyp" />
             </a>
     
-            <a href="https://www.instagram.com/glasscafe/">
+            <a href="https://www.instagram.com/glasscafe/" aria-label="Följ oss på instagram">
               <img class="social-media" src="/assets/ig.png" alt="Instagram" />
             </a>
           </section>
@@ -102,23 +102,42 @@
     
         <section id="gallerysection">
           <h2>Bildgalleri</h2>
-    
-          <div id="main-container">
-            <img class="img-fluid1" src="/assets/bildgalleri.jpg" alt="alla anställda">
-            <img class="img-fluid2" src="/assets/va.jpg" alt="barn i kassan">
-            <img class="img-fluid3" src="/assets/gang.jpg" alt="bild på anställda">
-            <img class="img-fluid4" src="/assets/gyttmeglass.jpg" alt="tjejer äter glass i solen">
-            <img class="img-fluid5" src="/assets/hårigglass.jpg" alt="glassdiadem">
-            <img class="img-fluid6" src="/assets/hangin.jpg" alt="umgås i solen">
-            <img class="img-fluid7" src="/assets/kvinna.jpg" alt="kvinna äter glass">
-            <img class="img-fluid8" src="/assets/mmglass.jpg" alt="barn äter glass">
-            <img class="img-fluid9" src="/assets/mmglass2.jpg" alt="barn äter glass">
-            <img class="img-fluid10" src="/assets/ok.jpg" alt="barn äter glass">
-            <img class="img-fluid11" src="/assets/xtrasauce.jpg" alt="glass med sås">
-            <img class="img-fluid12" src="/assets/glasspersonal.jpg" alt="personal">
-            <img class="img-fluid13" src="/assets/glassbäger.jpg" alt="bägare med glass">
-            <img class="img-fluid14" src="/assets/personaldisk.jpg" alt="jobba i baren">
-            <img class="img-fluid15" src="/assets/glassbil.jpg" alt="glassbil">
+ 
+          <div class="row">
+            <div class="column">
+              <img class="img-fluid" src="/assets/bildgalleri.jpg">
+              <img class="img-fluid" src="/assets/va.jpg">
+              <img class="img-fluid" src="/assets/gang.jpg">
+              <img class="img-fluid" src="/assets/gyttmeglass.jpg">
+              <img class="img-fluid" src="/assets/hårigglass.jpg">
+              <img class="img-fluid" src="/assets/hangin.jpg">
+              <img class="img-fluid" src="/assets/kvinna.jpg">
+            </div>
+            <div class="column">
+              <img class="img-fluid" src="/assets/mmglass.jpg">
+              <img class="img-fluid" src="/assets/mmglass2.jpg">
+              <img class="img-fluid" src="/assets/ok.jpg">
+              <img class="img-fluid" src="/assets/xtrasauce.jpg">
+              <img class="img-fluid" src="/assets/glasspersonal.jpg">
+              <img class="img-fluid" src="/assets/personaldisk.jpg">
+            </div>
+            <div class="column">
+              <img class="img-fluid" src="/assets/glassbil.jpg">
+              <img class="img-fluid" src="/assets/bildgalleri.jpg">
+              <img class="img-fluid" src="/assets/va.jpg">
+              <img class="img-fluid" src="/assets/gang.jpg">
+              <img class="img-fluid" src="/assets/gyttmeglass.jpg">
+              <img class="img-fluid" src="/assets/hårigglass.jpg">
+              <img class="img-fluid" src="/assets/hangin.jpg">
+            </div>
+            <div class="column">
+              <img class="img-fluid" src="/assets/kvinna.jpg">
+              <img class="img-fluid" src="/assets/mmglass.jpg">
+              <img class="img-fluid" src="/assets/mmglass2.jpg">
+              <img class="img-fluid" src="/assets/ok.jpg">
+              <img class="img-fluid" src="/assets/xtrasauce.jpg">
+              <img class="img-fluid" src="/assets/glasspersonal.jpg">
+            </div>
           </div>
         </section>
       </div>
@@ -157,12 +176,14 @@
     </div> 
   </div>
   <footer>
-    <div>
-      <a href="#content-container" class="footer-item">START</a>
-      <a href="#oppetider-container" class="footer-item">KONTAKT</a>
-      <a href="#gallerysection" class="footer-item">BILDGALLERI</a>
-    </div>
-</footer>
+    <nav aria-label="Footer navigation">
+      <div>
+        <a href="#content-container" class="footer-item">START</a>
+        <a href="#oppetider-container" class="footer-item">KONTAKT</a>
+        <a href="#gallerysection" class="footer-item">BILDGALLERI</a>
+      </div>
+    </nav>
+  </footer>
 <script>
     // Bildlista
     const images = [
