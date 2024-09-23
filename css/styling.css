@@ -147,7 +147,7 @@ body.fade-in {
  
 #master-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding-top: 5px;
   margin: 0 auto; 
   max-width: 100%; 
@@ -292,6 +292,7 @@ html {
 #oppetider-container {
   display: flex;
   gap: 1.2em;
+  flex-wrap: wrap;
   width: 1000px; /* Replace fixed width */
   justify-content: space-between;
   background-color: rgba(75, 75, 75, 0.35);
@@ -339,17 +340,7 @@ a {
   text-decoration: none;
   color: white;
 }
- 
-#footer-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  align-items: center;
-  height: 20px;
-  width: 400px;
-  gap: 20px;
-  margin-bottom: 50px;
-}
+
  
 footer {
   display: flex;
@@ -357,13 +348,6 @@ footer {
   align-items: center;
   padding: 20px;
   background-color: wheat;
-}
- 
-#menu-container{
-  display: flex;
-  align-self: center;
-  width: 1000px;
-  height: 50px;
 }
  
 .footer-item{
@@ -402,7 +386,65 @@ footer {
     justify-content: center;
   }
  
-
+  @media (max-width: 600px) {
+    #main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+   
+    #main-container img{
+      width: 80%;
+      height: auto;
+    }
+   
+   
+  #content-container{
+    max-width: 450px;
+    font-size: 14px;
+  }
+   
+  .item{
+    font-size: large;
+  }
+   
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+   
+   .q-container{
+      width:400px;
+      height: 800px;
+      flex-wrap: wrap;
+    }
+   
+    .q-item h4{
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+   
+    .question{
+      font-size: 40px;
+      font-weight:900;
+      color: crimson;
+      text-decoration-line: underline;
+    }
+   
+   
+    footer{
+      display: flex;
+      gap: 15px;
+    }
+   
+    .footer-item{
+      font-weight:900;
+    }
+  }
  
  
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
