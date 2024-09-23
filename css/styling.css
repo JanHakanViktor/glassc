@@ -399,7 +399,19 @@ footer {
       height: auto;
     }
    
-   
+    @media (max-width: 430px) {
+      #side-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 430px) {
+        .logo {
+          display: none;
+        }
+
   #content-container{
     max-width: 450px;
     font-size: 14px;
