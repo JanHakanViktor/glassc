@@ -457,6 +457,14 @@ footer {
 
  
 @media (min-width: 1025px) {
-  aside {
+  #oppettider-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .kontakt{
+    display: block;
   }
 }
