@@ -42,7 +42,28 @@ body.fade-in {
   top: 0;
   left: 0;
 }
+<<<<<<< HEAD:css/stylesass.css
 
+=======
+ 
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 34, 34, 0.273) 100%,
+    rgba(82, 82, 82, 0) 100%
+  )
+}
+ 
+.logo {
+  max-width: 8em;
+  height: auto;
+  padding: 0.5em 0 0 0.5em;
+  position: absolute;
+  z-index: 1000;
+}
+ 
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
 .meny {
   position: relative;
   z-index: 1;
@@ -97,6 +118,7 @@ body.fade-in {
   margin: 0;
   font-size: 20px;
 }
+<<<<<<< HEAD:css/stylesass.css
 
 .header.scrolled {
   background-color: rgba(0, 0, 0, 0.5);
@@ -112,6 +134,10 @@ body.fade-in {
 }
 
 .welcome {
+=======
+ 
+#welcome {
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,9 +154,15 @@ body.fade-in {
   display: flex;
   justify-content: center;
   padding-top: 5px;
+<<<<<<< HEAD:css/stylesass.css
   margin: 0 auto;
   max-width: 100%;
   width: 100%;
+=======
+  margin: 0 auto; 
+  max-width: 100%; 
+  width: 100%; 
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
 }
 
 main {
@@ -148,7 +180,11 @@ main {
   flex-wrap: wrap;
   flex-direction: row;
   max-width: 1000px;
+<<<<<<< HEAD:css/stylesass.css
   margin: 0 auto;
+=======
+  margin: 0 auto; 
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
   border-radius: 50px;
   row-gap: 5em;
 }
@@ -160,7 +196,11 @@ main {
   flex-wrap: wrap;
   flex-direction: row;
   max-width: 1000px;
+<<<<<<< HEAD:css/stylesass.css
   margin: 0 auto;
+=======
+  margin: 0 auto; 
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
   border-radius: 50px;
   background-color: rgba(75, 75, 75, 0.35);
   border: 2px solid #fff;
@@ -203,6 +243,7 @@ main {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
 }
+<<<<<<< HEAD:css/stylesass.css
 
 #main-container {
   display: grid;
@@ -212,6 +253,9 @@ main {
   grid-row-gap: 2px;
 }
 
+=======
+   
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
 #gallerysection {
   width: 1000px;
   border-radius: 50px;
@@ -221,12 +265,42 @@ main {
   max-width: 1000px;
   border-radius: 50px;
   margin-bottom: 20px;
+<<<<<<< HEAD:css/stylesass.css
   border: 2px solid #fff;
 }
 #gallerysection img:hover {
   transform: scale(1.1);
   border-radius: 10px;
 }
+=======
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+
+.column {
+  flex: 25%;
+  max-width: 24%;
+  padding: 0 4px;
+  
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+  
+#gallerysection img:hover{
+  transform: scale(1.1);
+  border-radius: 10px;
+} 
+
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
 #gallerysection h2 {
   display: flex;
   justify-content: center;
@@ -307,7 +381,11 @@ a {
   text-decoration: none;
   color: white;
 }
+<<<<<<< HEAD:css/stylesass.css
 
+=======
+ 
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
 footer {
   display: flex;
   justify-content: space-evenly;
@@ -341,12 +419,17 @@ footer {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+<<<<<<< HEAD:css/stylesass.css
 }
+=======
+} 
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
 
 @media screen and (max-width: 1024px) {
   .column {
     flex: 45%;
     max-width: 50%;
+<<<<<<< HEAD:css/stylesass.css
   }
   .logo {
     display: none;
@@ -362,7 +445,11 @@ footer {
   .logo {
     display: none;
   }
+=======
+  }
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
 }
+
 @media (max-width: 600px) {
   #main-container {
     display: flex;
@@ -386,11 +473,20 @@ footer {
     border-bottom-left-radius: 50px;
     border-top-right-radius: 0;
   }
+<<<<<<< HEAD:css/stylesass.css
+=======
+
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
   .column {
     flex: 100%;
     max-width: 100%;
   }
+<<<<<<< HEAD:css/stylesass.css
   #master-container {
+=======
+ 
+  #master-container{
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -436,6 +532,7 @@ footer {
     font-weight: 900;
   }
 }
+<<<<<<< HEAD:css/stylesass.css
 @media (min-width: 600px) and (max-width: 1024px) {
   #master-container {
     display: flex;
@@ -470,3 +567,21 @@ footer {
     width: 600px;
   }
 }/*# sourceMappingURL=stylesass.css.map */
+=======
+
+ 
+@media (min-width: 1025px) {
+  #oppettider-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .kontakt{
+    display: block;
+  }
+}
+
+
+>>>>>>> dca61ba11ffee033f55472aed3aae0c8ee871112:css/styling.css
