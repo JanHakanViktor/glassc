@@ -3,6 +3,11 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 130px;
   } 
+
+  .img-fluid{
+    max-width: 100%;
+    height: auto;
+  }
   
   body {
     margin: 0;
